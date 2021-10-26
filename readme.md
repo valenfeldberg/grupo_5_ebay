@@ -1,14 +1,19 @@
-Git init  Crear un repositorio
-Git config user.name
-Git config user.email
-Git remote add origin
-Git add nombreArchivo  agrega el archivo a un nuevo estado (staging área)
-Git commit -m ‘mensaje’ guardo todo (una imagen)
-Git remote add origin  agregar un repositorio remoto. Origin es el repositorio remoto
-Git push -u origin master   subir los cambios al repositorio remoto
+BARTER
+“Barter, el lugar donde aquello que no usás se puede convertir en aquello que deseás”
 
-Git diff  cambios que tiene el archivo 
-Git log  historial de commits
-Git fetch  si tenemos algún cambio 
+Pagina web de trueque, en donde el usuario sube los productos que le sobran para poder intercambiarlo por productos que necesita.
 
-Git pull  nos baja los cambios del repositorio remoto
+Esta pagina apunta a todo consumidor que necesite deshacerse de productos que ya no usa, por otros que si. En especifico, esta apuntado a personas que viven sola de entre 25 - 50 años
+
+-- INTEGRANTES:
+    Bernardo Rubino
+    Javier Bonaventura
+    Julian G. Valle
+    Valentina Feldberg
+
+-- REFERENTES DEL MERCADO:
+    - Mercado Libre
+    - Ebay
+    - Amazon 
+    - Slabon.es : Intercambio de libros y videojuegos. Simplemente te registras, añades los productos que quieres ofertar, escoges los que deseas, y Slabon te busca los posibles intercambios. El único coste son los gastos de envío, salvo que encuentres a alguien en tu pueblo o ciudad.
+    - Creciclando : Red de trueque de juguetes, ropa y accesorios para niños, bebés y premamás. Todos los objetos se valoran de forma automática mediante un sistema de puntuación. Es muy útil, ya que son productos con un uso muy corto.
