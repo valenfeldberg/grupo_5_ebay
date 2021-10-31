@@ -6,10 +6,10 @@
 Esta pagina apunta a todo consumidor que necesite deshacerse de productos que ya no usa, por otros que si. En especifico, esta apuntado a personas que viven sola de entre 25 - 50 años
 
 -- INTEGRANTES:
-    Bernardo Rubino
-    Javier Bonaventura
-    Julian G. Valle
-    Valentina Feldberg
+    Bernardo Rubino (agregar descripcion)
+    Javier Bonaventura (agregar descripcion)
+    Julian G. Valle (agregar descripcion)
+    Valentina Feldberg (agregar descripcion)
 
 -- REFERENTES DEL MERCADO:
     - Mercado Libre
