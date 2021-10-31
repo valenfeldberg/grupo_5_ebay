@@ -12,7 +12,7 @@ Esta pagina apunta a todo consumidor que necesite deshacerse de productos que ya
    * Valentina Feldberg (agregar descripcion)
 
 -- REFERENTES DEL MERCADO:
-   * - Mercado Libre (https://www.mercadolibre.com.ar/)
+   * - Mercado Libre (https://www.mercadolibre.com.ar/) Mercado Libre es una empresa argentina dedicada al comercio electrónico. Los usuarios pueden vender y comprar tanto productos nuevos como usados a un precio fijo o variable, además de que se ofrecen servicios privados. MercadoLibre también posee un servicio llamado MercadoPago, una plataforma de cobro a los compradores y pagos y abonos a los vendedores. Sus oficinas centrales se encuentran en Buenos Aires, Argentina.
    * - Ebay (https://ebay.com/)
    * - Amazon (https://www.amazon.com/-/es/
    * - Style Lovely: (https://stylelovely.com/) Portal de moda, pone a disposición una sección de trueque de ropa online. Requiere registrarse previamente y subir fotos de las prendas que queráis intercambiar.
