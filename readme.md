@@ -12,9 +12,9 @@ Esta pagina apunta a todo consumidor que necesite deshacerse de productos que ya
    * Valentina Feldberg (agregar descripcion)
 
 -- REFERENTES DEL MERCADO:
-    - Mercado Libre (https://www.mercadolibre.com.ar/)
-    - Ebay (https://ebay.com/)
-    - Amazon (https://www.amazon.com/-/es/
-    - Style Lovely: (https://stylelovely.com/) Portal de moda, pone a disposición una sección de trueque de ropa online. Requiere registrarse previamente y subir fotos de las prendas que queráis intercambiar.
-    - Truequeweb (https://www.truequeweb.com/)
-    - Truekeo (https://www.truekeo.com/acerca_de.php)
+   * - Mercado Libre (https://www.mercadolibre.com.ar/)
+   * - Ebay (https://ebay.com/)
+   * - Amazon (https://www.amazon.com/-/es/
+   * - Style Lovely: (https://stylelovely.com/) Portal de moda, pone a disposición una sección de trueque de ropa online. Requiere registrarse previamente y subir fotos de las prendas que queráis intercambiar.
+   * - Truequeweb (https://www.truequeweb.com/)
+   * - Truekeo (https://www.truekeo.com/acerca_de.php)
