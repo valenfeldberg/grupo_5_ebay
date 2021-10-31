@@ -6,10 +6,10 @@
 Esta pagina apunta a todo consumidor que necesite deshacerse de productos que ya no usa, por otros que si. En especifico, esta apuntado a personas que viven sola de entre 25 - 50 años
 
 -- INTEGRANTES:
-    Bernardo Rubino (agregar descripcion)
-    Javier Bonaventura (agregar descripcion)
-    Julian G. Valle (agregar descripcion)
-    Valentina Feldberg (agregar descripcion)
+   * Bernardo Rubino (agregar descripcion)
+   * Javier Bonaventura (agregar descripcion)
+   * Julian G. Valle (agregar descripcion)
+   * Valentina Feldberg (agregar descripcion)
 
 -- REFERENTES DEL MERCADO:
     - Mercado Libre (https://www.mercadolibre.com.ar/)
@@ -17,3 +17,4 @@ Esta pagina apunta a todo consumidor que necesite deshacerse de productos que ya
     - Amazon (https://www.amazon.com/-/es/
     - Style Lovely: (https://stylelovely.com/) Portal de moda, pone a disposición una sección de trueque de ropa online. Requiere registrarse previamente y subir fotos de las prendas que queráis intercambiar.
     - Truequeweb (https://www.truequeweb.com/)
+    - Truekeo (https://www.truekeo.com/acerca_de.php)
