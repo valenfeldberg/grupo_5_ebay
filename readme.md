@@ -15,5 +15,5 @@ Esta pagina apunta a todo consumidor que necesite deshacerse de productos que ya
     - Mercado Libre
     - Ebay
     - Amazon 
-    - Slabon.es : Intercambio de libros y videojuegos. Simplemente te registras, añades los productos que quieres ofertar, escoges los que deseas, y Slabon te busca los posibles intercambios. El único coste son los gastos de envío, salvo que encuentres a alguien en tu pueblo o ciudad.
+    - Style Lovely: Portal de moda, pone a disposición una sección de trueque de ropa online. Requiere registrarse previamente y subir fotos de las prendas que queráis intercambiar.
     - Creciclando : Red de trueque de juguetes, ropa y accesorios para niños, bebés y premamás. Todos los objetos se valoran de forma automática mediante un sistema de puntuación. Es muy útil, ya que son productos con un uso muy corto.
