@@ -12,8 +12,8 @@ Esta pagina apunta a todo consumidor que necesite deshacerse de productos que ya
     Valentina Feldberg (agregar descripcion)
 
 -- REFERENTES DEL MERCADO:
-    - Mercado Libre
-    - Ebay
-    - Amazon 
-    - Style Lovely: Portal de moda, pone a disposición una sección de trueque de ropa online. Requiere registrarse previamente y subir fotos de las prendas que queráis intercambiar.
-    - Creciclando : Red de trueque de juguetes, ropa y accesorios para niños, bebés y premamás. Todos los objetos se valoran de forma automática mediante un sistema de puntuación. Es muy útil, ya que son productos con un uso muy corto.
+    - Mercado Libre (https://www.mercadolibre.com.ar/)
+    - Ebay (https://ebay.com/)
+    - Amazon (https://www.amazon.com/-/es/
+    - Style Lovely: (https://stylelovely.com/) Portal de moda, pone a disposición una sección de trueque de ropa online. Requiere registrarse previamente y subir fotos de las prendas que queráis intercambiar.
+    - Truequeweb (https://www.truequeweb.com/)
