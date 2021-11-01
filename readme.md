@@ -6,7 +6,7 @@
 Esta pagina apunta a todo consumidor que necesite deshacerse de productos que ya no usa, por otros que si. En especifico, esta apuntado a personas que viven sola de entre 25 - 50 años
 
 -- INTEGRANTES:
-   * Bernardo Rubino (agregar descripcion)
+   * Bernardo Rubino: Tengo 25 años, soy tecnico en administracion, trabajo de administrativo en una empresa metalurgica. Empece este curso porque siempre me intereso saber lo que pasa atras de una pagina web, aplicacion, etc. Tambien para poder ejercer y vivir de esto.
    * Javier Bonaventura (agregar descripcion)
    * Julian G. Valle (agregar descripcion)
    * Valentina Feldberg (agregar descripcion)
