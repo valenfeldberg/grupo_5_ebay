@@ -9,7 +9,7 @@ Esta pagina apunta a todo consumidor que necesite deshacerse de productos que ya
 ### INTEGRANTES:
    * ***Bernardo Rubino:*** Tengo 25 años, soy tecnico en administracion, trabajo de administrativo en una empresa metalurgica. Empece este curso porque siempre me intereso saber lo que pasa atras de una pagina web, aplicacion, etc. Tambien para poder ejercer y vivir de esto.
    * ***Javier Bonaventura:*** Tengo 40 años, soy Técnico Electrónico. Trabajo en el área de energía eléctrica. Me inscribí en el curso con el fin de mejorar personal y profesionalmente
-   * ***Julian G. Valle*** (agregar descripcion)
+   * ***Julian G. Valle:*** tengo 24 años, estoy terminando la carrera de grado de Contador Público. Trabajé en auditoría 5 años, ahora soy bancario y me inscribí en este curso por curiosidad. Quería saber qué pasaba detrás de una página y cómo se programaba. Mi objetivo es desarrollar aplicaciones volcando el conocimiento que adquirí en el transcurso de mi carrera para generar soluciones. 
    * ***Valentina Feldberg*** (agregar descripcion)
 
 ### REFERENTES DEL MERCADO:
