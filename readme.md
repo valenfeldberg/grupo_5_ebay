@@ -7,7 +7,7 @@ Esta pagina apunta a todo consumidor que necesite deshacerse de productos que ya
 
 -- INTEGRANTES:
    * Bernardo Rubino: Tengo 25 años, soy tecnico en administracion, trabajo de administrativo en una empresa metalurgica. Empece este curso porque siempre me intereso saber lo que pasa atras de una pagina web, aplicacion, etc. Tambien para poder ejercer y vivir de esto.
-   * Javier Bonaventura (agregar descripcion)
+   * Javier Bonaventura: Tengo 40 años, soy Técnico Electrónico. Trabajo en el área de energía eléctrica. Me inscribí en el curso con el fin de mejorar personal y profesionalmente
    * Julian G. Valle (agregar descripcion)
    * Valentina Feldberg (agregar descripcion)
 
