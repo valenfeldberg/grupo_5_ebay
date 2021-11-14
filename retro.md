@@ -8,7 +8,7 @@ Deberiamos hacer mas reuniones de corta duracion durante la semana para asignar 
 En relacion al punto anterior, actualmente nos reunimos previo a la entrega de cada Sprint, pero seria bueno incrementar la frecuencia de las reuniones
 
 ### 3. Continuar haciendo: 
-Como ya lo venimos haciendo hay que segiur investigando sitios para recopilar info, estilos, etc que nos van a ser utiles para nuestro proyecto BARTER
+Como ya lo venimos haciendo hay que seguir investigando sitios para recopilar info, estilos, etc que nos van a ser utiles para nuestro proyecto BARTER
 
 ### 4. Hacer menos: 
 No identificamos ninguna actividad que estemos haciendo que no nos genere valor al proyecto
