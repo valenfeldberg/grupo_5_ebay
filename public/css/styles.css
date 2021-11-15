@@ -1,0 +1,86 @@
+html{
+    font-family: Roboto;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 70px;
+    margin: -2%;
+    background-color: #c4c4c4;
+    border-bottom: solid 2px black;
+}
+
+.ingreso {
+    text-align: center;
+    margin-top: -1%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 23px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+i {
+    color: #8a8888;
+}
+
+.buscar, .fas fa-search {
+    width: 85%;
+    margin: 10px;
+}
+
+.buscar {
+    height: 35px;
+    font-size: 15px;
+}
+
+
+.sub-cat {
+    text-align: center;
+    margin-top: -1%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
+}
+
+.banner {
+    margin-bottom: 15px;
+}
+
+.frase {
+    text-align: center;
+    background-color: #c4c4c4;
+    margin: -2%;
+    padding: 7px;
+    border-bottom: solid 2px black;
+    border-top: solid 2px black;
+    font-style: italic;
+}
+
+.publicaciones {
+    margin-top: 30px;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+article {
+    background-color: white;
+    margin-bottom: 10px;
+    border: solid 2px #8a8888;
+}
+
+.articulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5px;
+    text-decoration: underline;
+}
+
+.ubicacion {
+    margin-left: 5px;
+}
