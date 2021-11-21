@@ -38,7 +38,6 @@ i {
     font-size: 15px;
 }
 
-
 .sub-cat {
     text-align: center;
     margin-top: -1%;
@@ -83,4 +82,42 @@ article {
 
 .ubicacion {
     margin-left: 5px;
+}
+
+.bienvenido {
+    text-align: center;
+    font-size: 25px;
+}
+
+.html-login {
+    background-color: #c4c4c4;
+}
+
+form {
+    background-color: white;
+    margin: 15px;
+    padding: 25px;
+    border-radius: 7px;
+}
+
+.usuario {
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.usuario input {
+    font-size: 12px;
+}
+
+.ingresar {
+    padding: 3px;
+    font-size: 12px;
+    background-color: #c4c4c4;
+    border-radius: 7px;
+    margin-top: 13px;
+    align-items: center;
+}
+
+.control {
+    width: 100%;
 }
