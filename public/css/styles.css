@@ -1,13 +1,18 @@
 html{
     font-family: Roboto;
+    background-color: rgb(0, 0, 0);
 }
 
 .titulo {
+    color: white;
     text-align: center;
-    font-size: 70px;
-    margin: -2%;
-    background-color: #c4c4c4;
-    border-bottom: solid 2px black;
+    font-size: 65px;
+    margin: -0.1%;
+    border-bottom: solid 2px rgb(255, 255, 255);
+    /*font-family: 'Viga', sans-serif;*/
+    font-family: 'Fredericka the Great', cursive;
+    
+
 }
 
 .ingreso {
@@ -16,17 +21,21 @@ html{
     padding: 10px;
     display: flex;
     justify-content: space-around;
-    font-size: 23px;
+    font-size: 18px;
+    
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 i {
-    color: #8a8888;
+    color:white;
+    font-size:22px;
 }
+
+
 
 .buscar, .fas fa-search {
     width: 85%;
@@ -36,7 +45,10 @@ i {
 .buscar {
     height: 35px;
     font-size: 15px;
+    border-radius:20px;
 }
+
+
 
 
 .sub-cat {
@@ -49,38 +61,60 @@ i {
 }
 
 .banner {
-    margin-bottom: 15px;
+    display: flex;
+    margin-bottom: 10px;
+    
+    justify-content: center;
+    width: 100%;
+
 }
 
 .frase {
-    text-align: center;
-    background-color: #c4c4c4;
-    margin: -2%;
-    padding: 7px;
-    border-bottom: solid 2px black;
-    border-top: solid 2px black;
-    font-style: italic;
+    color: rgb(155, 155, 155);
+    font-size: 16px;
+    font-family: 'Viga', sans-serif;
 }
 
 .publicaciones {
     margin-top: 30px;
-    font-size: 18px;
-    text-decoration: underline;
+    font-size: 24px;
+    
+       
+    color: rgb(255, 255, 255);
 }
 
 article {
+    padding-top: 20px;
+    text-align: center;
     background-color: white;
     margin-bottom: 10px;
     border: solid 2px #8a8888;
+    width: 100%;
+    border-radius:5px;
 }
 
 .articulo {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     margin-left: 5px;
-    text-decoration: underline;
+    font-family: 'Viga', sans-serif;    
+    text-align: center;
 }
 
 .ubicacion {
+    font-size: 24px;
+    text-align: center;
     margin-left: 5px;
+    font-family: 'Viga', sans-serif;    
+    color: rgb(92, 92, 92);
+    margin-top: -20px;
+}
+
+.ubicacion i {
+    color: rgb(92, 92, 92);
+}
+
+footer {
+    text-align: center;
+    color: white;
 }
