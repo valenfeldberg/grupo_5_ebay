@@ -16,36 +16,35 @@
     <header>
         <h1 class = "titulo"> BARTER </h1><br>
     </header>   
-    <form action="/" method="POST" class="create-form">
+    <form class="formato-formulario font.formulario" action="/" method="POST" class="create-form">
         <div class="control-formulario">
             <label></label>
-            <input type="text" name="nombre" class="control" placeholder="Nombre y Apellido:">
-            <span class="feedback"></span>
+            <input type="text" name="nombre" class="placeholder" placeholder="Nombre y Apellido:">
         </div>
-
+        <br>
         <div class="control-formulario">
             <label></label>
-            <input type="text" name="usuario" class="control" placeholder="Nombre de usuari@">
+            <input type="text" name="usuario" class="placeholder" placeholder="Nombre de usuari@">
         </div>
-        
+        <br>
         <div class=”control-formulario”>
-            <label  for="">Fecha de Nacimiento:  </label>
-            <input  input type="date" name="fecha">
+            <label for="">Fecha de Nacimiento:</label>
+            <input input type="date" name="fecha">
         </div>
-
+        <br>
         <div class="control-formulario">
             <label for=""></label>
-            <input type="text" name="domicilio" class="control" placeholder="Domicilio">
+            <input type="text" name="domicilio" class="placeholder" placeholder="Domicilio">
         </div>
-
+        <br>
         <div class="control-formulario">
-            <label for="">Perfil del usuario</label>
+            <label for="">Perfil del usuario</label><br>
             <label for="">Comprar</label>
             <input type="radio" name="compra-venta" value="Comprar">
             <label for="">Vender</label>
             <input type="radio" name="compra-venta" value="Vender">
         </div>
-
+        <br>
         <div class="control-formulario">
             <label>Categorias de interes:</label>
             <select name="categoria">
@@ -56,22 +55,22 @@
                 <option value="">Vida Sana</option>
             </select>
         </div>
-
+        <br>
         <div class="control-formulario">
             <label>Foto de Usuario:</label>
             <input type="file" name="avatar">
         </div>
-
+        <br>
         <div class="control-formulario">
             <label>Contraseña:</label>
-            <input type="password" name="contraseña" class="control">
+            <input type="password" name="contraseña" class="placeholder">
         </div>
 
         <div class="control-formulario">
             <label>Confirmar Contraseña:</label>
-            <input type="password" name="contraseña" class="control">
+            <input type="password" name="contraseña" class="placeholder">
         </div>
-
+        <br>
         <button type="submit" class="boton-formulario">Enviar</button>
         <button type="reset" class="boton-formulario">Borrar</button>
     
