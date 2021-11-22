@@ -4,7 +4,8 @@
   "description": "## Pagina web de trueque, en donde el usuario sube los productos que le sobran para poder intercambiarlo por productos que necesita.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

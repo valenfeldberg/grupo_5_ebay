@@ -12,6 +12,18 @@ app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname + "/views/login.html"))
 })
 
+app.get('/productDetailParlante', (req, res) => {
+  res.sendFile(path.join(__dirname + "/views/productDetailParlante.html"))
+})
+
+app.get('/productDetailBicicleta', (req, res) => {
+  res.sendFile(path.join(__dirname + "/views/productDetailBicicleta.html"))
+})
+
+app.get('/productDetailMicro', (req, res) => {
+  res.sendFile(path.join(__dirname + "/views/productDetailMicro.html"))
+})
+
 app.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname + "/views/register.html"))
 })

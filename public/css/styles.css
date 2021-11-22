@@ -116,6 +116,7 @@ footer {
 .bienvenido {
     text-align: center;
     font-size: 25px;
+    color: white;
 }
 
 .html-login {
@@ -151,6 +152,25 @@ form {
     width: 100%;
 }
 
+/* estilos para detalle de articulo */
+
+.tituloArticulo {
+    margin-top: 30px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
+.descripcionArticulo {
+    display: flex;
+    justify-content:center;
+    padding: 10px;
+}
+
+.textoDescripcion {
+    text-align: left;
+    padding: 12px;
+}
 .formato-formulario {
     background-color: black;
     color: white;
