@@ -116,10 +116,11 @@ footer {
 .bienvenido {
     text-align: center;
     font-size: 25px;
+    color: white;
 }
 
 .html-login {
-    background-color: #c4c4c4;
+    background-color: black;
 }
 
 form {
