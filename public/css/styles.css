@@ -11,8 +11,6 @@ html{
     border-bottom: solid 2px rgb(255, 255, 255);
     /*font-family: 'Viga', sans-serif;*/
     font-family: 'Fredericka the Great', cursive;
-    
-
 }
 
 .ingreso {
@@ -171,4 +169,18 @@ form {
 .textoDescripcion {
     text-align: left;
     padding: 12px;
+}
+.formato-formulario {
+    background-color: black;
+    color: white;
+    font-family: Roboto;
+    margin: -10px;
+}
+
+.placeholder {
+    border-color: white;
+    width: 100%;
+    font-family: Roboto;
+    border: 2px;
+    padding: 3px;
 }

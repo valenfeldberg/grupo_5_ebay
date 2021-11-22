@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate en Barter!</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-barter.png">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Aleo&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Roboto:wght@100;400&family=Viga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Fredericka+the+Great&family=Monoton&family=Roboto:wght@100;400&family=Viga&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a class="logo" href="/"><p class="titulo">BARTER ⇄</p></a><br>
+    </header>   
+    <form class="formato-formulario" action="/" method="POST" class="create-form">
+        <div class="control-formulario">
+            <label></label>
+            <input type="text" name="nombre" class="placeholder" placeholder="Nombre y Apellido:">
+        </div>
+        <br>
+        <div class="control-formulario">
+            <label></label>
+            <input type="text" name="usuario" class="placeholder" placeholder="Nombre de usuari@">
+        </div>
+        <br>
+        <div class="control-formulario">
+            <label></label>
+            <input type="text" name="email" class="placeholder" placeholder="Dirección de email">
+        </div>
+        <br>
+        <div class=”control-formulario”>
+            <label for="">Fecha de Nacimiento:</label>
+            <input type="date" name="fecha" placeholder="Fecha de nacimiento">
+        </div>
+        <br>
+        <div class="control-formulario">
+            <label for=""></label>
+            <input type="text" name="domicilio" class="placeholder" placeholder="Domicilio">
+        </div>
+        <br>
+        <div class="control-formulario">
+            <label for="">Perfil del usuario:</label><br>
+            <label for="">Comprar</label>
+            <input type="radio" name="compra-venta" value="Comprar">
+            <label for="">Vender</label>
+            <input type="radio" name="compra-venta" value="Vender">
+        </div>
+        <br>
+        <div class="control-formulario">
+            <label>Categorias de interes:</label>
+            <select name="categoria">
+                <option value="">Seleccionar...</option>
+                <option value="">Electro</option>
+                <option value="">Moda</option>
+                <option value="">Hogar</option>	
+                <option value="">Jugueteria</option>
+                <option value="">Vida Sana</option>
+            </select>
+        </div>
+        <br>
+        <div class="control-formulario">
+            <label>Foto de Usuario:</label>
+            <input type="file" name="avatar">
+        </div>
+        <br>
+        <div class="control-formulario">
+            <label>Contraseña:</label>
+            <input type="password" name="contraseña" class="placeholder">
+        </div>
+
+        <div class="control-formulario">
+            <label>Confirmar Contraseña:</label>
+            <input type="password" name="contraseña" class="placeholder">
+        </div>
+        <br>
+        <button type="submit" class="boton-formulario">Enviar</button>
+        <button type="reset" class="boton-formulario">Borrar</button>
+    
+    </form>
+</body>
+</html>

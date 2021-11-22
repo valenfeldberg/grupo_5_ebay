@@ -24,6 +24,10 @@ app.get('/productDetailMicro', (req, res) => {
   res.sendFile(path.join(__dirname + "/views/productDetailMicro.html"))
 })
 
+app.get('/register', (req, res) => {
+  res.sendFile(path.join(__dirname + "/views/register.html"))
+})
+
 app.post('/', (req, res) => {
   res.sendFile(path.join(__dirname + "/views/index.html"))
 })
