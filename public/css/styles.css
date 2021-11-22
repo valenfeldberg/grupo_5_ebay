@@ -11,8 +11,6 @@ html{
     border-bottom: solid 2px rgb(255, 255, 255);
     /*font-family: 'Viga', sans-serif;*/
     font-family: 'Fredericka the Great', cursive;
-    
-
 }
 
 .ingreso {
@@ -155,10 +153,9 @@ form {
 
 .formato-formulario {
     background-color: black;
-}
-
-.font-formulario {
+    color: white;
     font-family: Roboto;
+    margin: -10px;
 }
 
 .placeholder {

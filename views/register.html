@@ -11,12 +11,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Aleo&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Roboto:wght@100;400&family=Viga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Fredericka+the+Great&family=Monoton&family=Roboto:wght@100;400&family=Viga&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1 class = "titulo"> BARTER </h1><br>
+        <a class="logo" href="/"><p class="titulo">BARTER ⇄</p></a><br>
     </header>   
-    <form class="formato-formulario font.formulario" action="/" method="POST" class="create-form">
+    <form class="formato-formulario" action="/" method="POST" class="create-form">
         <div class="control-formulario">
             <label></label>
             <input type="text" name="nombre" class="placeholder" placeholder="Nombre y Apellido:">
@@ -38,7 +41,7 @@
         </div>
         <br>
         <div class="control-formulario">
-            <label for="">Perfil del usuario</label><br>
+            <label for="">Perfil del usuario:</label><br>
             <label for="">Comprar</label>
             <input type="radio" name="compra-venta" value="Comprar">
             <label for="">Vender</label>
@@ -48,6 +51,7 @@
         <div class="control-formulario">
             <label>Categorias de interes:</label>
             <select name="categoria">
+                <option value="">Seleccionar...</option>
                 <option value="">Electro</option>
                 <option value="">Moda</option>
                 <option value="">Hogar</option>	
