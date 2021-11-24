@@ -22,14 +22,6 @@ html{
     font-size: 18px;
 }
 
-.user {
-    align-items: center;
-    margin-top: -1%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-}
-
 a {
     text-decoration: none;
     color: white;
@@ -192,4 +184,94 @@ form {
     font-family: Roboto;
     border: 2px;
     padding: 3px;
+}
+
+.user {
+    align-items: center;
+    margin-top: -1%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.user i {
+    text-align: center;
+    display: block;
+    font-size: 30px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: #FFF;
+}
+
+.user a{
+    text-decoration: none;
+}
+
+.intercambio{
+    display: flex;
+    justify-content: space-around;
+}
+
+.adquiero{
+    color:#8a8888;;
+    height: 100px;
+    width: 45%;
+    background-color:rgb(255, 255, 255);
+    box-shadow: blanchedalmond;
+}
+
+.entrego{
+    color:#8a8888;
+    height: 100px;
+    width: 45%;
+    background-color:rgb(255, 255, 255);
+    box-shadow: blanchedalmond;
+}
+
+.eliminar{
+    margin:20px;
+    color:white;
+    width: 15%;
+    background-color:rgb(255, 255, 255);
+    box-shadow: white;
+    background-color: black;
+    display: block;
+    font-size: 15px;
+    border-radius: 10%;
+}
+
+.seguirConfirmar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.seguirBuscando{
+    color:white;
+    width: 15%;
+    background-color:rgb(255, 255, 255);
+    box-shadow: white;
+    background-color: black;
+    display: block;
+    font-size: 15px;
+    border-radius: 10%;
+}
+
+.seguirBuscando i{
+    color: #8a8888 ;
+}
+
+.confirmarTrueque{
+     color:white;
+    width: 15%;
+    background-color:rgb(255, 255, 255);
+    box-shadow: white;
+    background-color: black;
+    display: block;
+    font-size: 15px;
+    border-radius: 10%;
+}
+
+.confirmarTrueque i{
+    color: #8a8888;
 }
