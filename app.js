@@ -8,6 +8,14 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + "/views/index.html"))
 })
 
+app.get('/index2', (req, res) => {
+  res.sendFile(path.join(__dirname + "/views/index2.html"))
+})
+
+app.post('/index2', (req, res) => {
+  res.sendFile(path.join(__dirname + "/views/index.html"))
+})
+
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname + "/views/login.html"))
 })
