@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 2000
+const port = 4000
 const path = require("path")
 app.use(express.static("public"));
 
@@ -13,7 +13,7 @@ app.get('/index2', (req, res) => {
 })
 
 app.post('/index2', (req, res) => {
-  res.sendFile(path.join(__dirname + "/views/index.html"))
+  res.sendFile(path.join(__dirname + "/views/index2.html"))
 })
 
 app.get('/login', (req, res) => {
