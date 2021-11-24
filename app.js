@@ -48,6 +48,10 @@ app.post('/', (req, res) => {
   res.sendFile(path.join(__dirname + "/views/index.html"))
 })
 
+app.post('/login', (req, res) => {
+  res.sendFile(path.join(__dirname + "/views/login.html"))
+})
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
