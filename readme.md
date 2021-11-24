@@ -20,4 +20,7 @@ Esta pagina apunta a todo consumidor que necesite deshacerse de productos que ya
    * - ***Truequeweb*** (https://www.truequeweb.com/) TruequeWeb.com es un sistema de intercambio de objetos y/o servicios, es decir, un sistema de trueque, no hay dinero de por medio, ponen en contacto a personas que quieran realizar un intercambio.
    * - ***Truekeo*** (https://www.truekeo.com/acerca_de.php)Truekeo es una plataforma gratuita para hacer trueques de cosas y servicios por internet. Es una vía alterna de apoyo económico y reuso para personas,
 
-Tablero de Trello: https://trello.com/b/C7cf93Sh/barter
+Tableros de Trello:
+  * - Sprint 1: https://trello.com/b/C7cf93Sh/barter
+  * - Sprint 2: https://trello.com/b/f2XLwuPt/barter-sprint-2
+
