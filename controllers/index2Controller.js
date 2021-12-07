@@ -1,5 +1,5 @@
 const index2Controller = {
-    index: (req, res, next) => {
+    index2: (req, res, next) => {
         res.render('index2', {});
       }
 }

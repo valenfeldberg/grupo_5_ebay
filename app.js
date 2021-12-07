@@ -13,10 +13,23 @@ app.set ('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-var indexRouter = require('./routes/index');
-var index2Router = require('./routes/index2');
-var loginRouter = require('./routes/login');
+const indexRouter = require('./routes/index');
+const index2Router = require('./routes/index2');
+const loginRouter = require('./routes/login');
+const registerRouter = require('./routes/register');
+const productRouterParlante = require('./routes/productParlante');
+const productRouterMicro = require('./routes/productMicro');
+const productRouterBicicleta = require('./routes/productBicicleta');
+const productRouterReposera = require('./routes/productReposera');
+const productRouterCart = require('./routes/cart');
+
 
 app.use('/', indexRouter);
 app.use('/index2', index2Router);
 app.use('/login', loginRouter);
+app.use('/register', registerRouter);
+app.use('/productDetailBicicleta', productRouterBicicleta);
+app.use('/productDetailReposera', productRouterReposera);
+app.use('/productDetailParlante', productRouterParlante);
+app.use('/productDetailMicro', productRouterMicro);
+app.use('/productCart', productRouterCart);

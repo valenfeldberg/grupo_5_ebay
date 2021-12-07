@@ -87,6 +87,17 @@ article {
     border-radius:5px;
 }
 
+article:hover {
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    transition: all 1s;
+}
+
+article:hover .articulo {
+    opacity: 1;
+    transition: opacity 1s;
+
+}
+
 .articulo {
     font-size: 24px;
     font-weight: bold;
@@ -162,8 +173,7 @@ form {
 }
 
 .descripcionArticulo {
-    display: flex;
-    justify-content:center;
+    display: block;
     padding: 10px;
 }
 
@@ -211,50 +221,46 @@ form {
 .intercambio{
     display: flex;
     justify-content: space-around;
+    font-size: 18px;
+    height: 250px;
 }
 
 .adquiero{
-    color:#8a8888;;
+    color:#ffffff;;
     height: 100px;
     width: 45%;
-    background-color:rgb(255, 255, 255);
-    box-shadow: blanchedalmond;
+    text-align: center;
+   
 }
 
 .entrego{
-    color:#8a8888;
+    color:#ffffff;
     height: 100px;
     width: 45%;
-    background-color:rgb(255, 255, 255);
-    box-shadow: blanchedalmond;
+    text-align: center;
+    
 }
 
 .eliminar{
-    margin:20px;
-    color:white;
-    width: 15%;
-    background-color:rgb(255, 255, 255);
-    box-shadow: white;
+   color: #ffffff;
     background-color: black;
-    display: block;
-    font-size: 15px;
-    border-radius: 10%;
+    font-size: 18px;
+   
 }
 
 .seguirConfirmar{
     display: flex;
+    color: #ffffff;
+    background-color: black;
+    font-size: 18px;
     justify-content: space-between;
+    width: 100%;
 }
 
 .seguirBuscando{
     color:white;
-    width: 15%;
-    background-color:rgb(255, 255, 255);
-    box-shadow: white;
-    background-color: black;
-    display: block;
-    font-size: 15px;
-    border-radius: 10%;
+ 
+    border-color: #ffffff;
 }
 
 .seguirBuscando i{
