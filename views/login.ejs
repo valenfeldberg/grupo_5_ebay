@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" class = "html-login">
+    <%- include ('./partials/head')%> 
+<body>
+    <header>
+        <a class="logo" href="/"><p class="titulo">BARTER ⇄</p></a><br>
+    </header>   
+
+    <a href="/"><i class="fas fa-arrow-left"> </i> </a>
+    <p class = "bienvenido" ><b>¡Bienvenido!</b></p>
+    
+    <form action="/index2" method="POST" class="create-form">
+        <div class="usuario">
+            <input type="email" name="email" class="control" placeholder="Email">
+        </div>
+
+        <div class="usuario">
+            <input type="password" name="contraseña" class="control" placeholder="Contraseña">
+        </div>
+
+        <button type="submit" class="ingresar">Ingresar</button>
+    </form>
+</body>
+</html>
