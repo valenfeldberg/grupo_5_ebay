@@ -16,6 +16,7 @@ No identificamos ninguna actividad que estemos haciendo que no nos genere valor 
 ### 5. Dejar de hacer: 
 Al igual que en "Hacer menos" no vemos actividades en este estado
 
+##
 
 ## Retrospectiva del Sprint 2
 
@@ -34,6 +35,7 @@ No identificamos ninguna actividad que estemos haciendo que no nos genere valor 
 ### 5. Dejar de hacer: 
 Al igual que en "Hacer menos" no vemos actividades en este estado
 
+##
 
 ## Retrospectiva del Sprint 3
 
