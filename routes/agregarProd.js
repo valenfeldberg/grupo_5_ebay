@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const agregarController = require('../controllers/agregarController');
+const agregarProdController = require('../controllers/addController');
 
-router.get('/', agregarController.agregar);
+
+router.get('/', agregarProdController.agregarProd);
+
 module.exports = router;

@@ -13,6 +13,7 @@ app.set ('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 const indexRouter = require('./routes/index');
 const index2Router = require('./routes/index2');
 const loginRouter = require('./routes/login');
@@ -22,7 +23,8 @@ const productRouterMicro = require('./routes/productMicro');
 const productRouterBicicleta = require('./routes/productBicicleta');
 const productRouterReposera = require('./routes/productReposera');
 const productRouterCart = require('./routes/cart');
-const agregarRouter = require('./routes/agregarProd');
+const agrearProducto = require('./routes/agregarProd');
+
 
 
 
@@ -35,4 +37,4 @@ app.use('/productDetailReposera', productRouterReposera);
 app.use('/productDetailParlante', productRouterParlante);
 app.use('/productDetailMicro', productRouterMicro);
 app.use('/productCart', productRouterCart);
-app.use('/agregarProducto', agregarRouter);
+app.use('/agregarProd', agrearProducto);
