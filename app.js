@@ -22,6 +22,8 @@ const productRouterMicro = require('./routes/productMicro');
 const productRouterBicicleta = require('./routes/productBicicleta');
 const productRouterReposera = require('./routes/productReposera');
 const productRouterCart = require('./routes/cart');
+const agregarRouter = require('./routes/agregarProd');
+
 
 
 app.use('/', indexRouter);
@@ -33,3 +35,4 @@ app.use('/productDetailReposera', productRouterReposera);
 app.use('/productDetailParlante', productRouterParlante);
 app.use('/productDetailMicro', productRouterMicro);
 app.use('/productCart', productRouterCart);
+app.use('/agregarProducto', agregarRouter);
