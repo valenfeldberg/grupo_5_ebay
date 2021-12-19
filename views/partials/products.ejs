@@ -1,0 +1,16 @@
+<div>
+    <a href="/product">  <p class = "publicaciones"><b>PUBLICACIONES</b></p></a>
+</div>
+
+<% for (let i = 0; i < product.length; i++) { %>
+    <article>
+
+            <a href="./<%- product[i].id %>"> <img src= "/images/<%- product[i].imagen %>" alt = "Parlante" width = "340px" ></a>
+
+            <section>
+                <p class="articulo"><%- product[i].nombre_producto %></p> 
+                <p class="ubicacion"><i class="fas fa-map-marked-alt"></i><%- product[i].ubicacion %></i></p>
+            </section>
+    
+    </article>
+<% } %>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('./partials/head')%> 
+    <header>
+
+        <p class="titulo">BARTER ⇄</p><br>
+        
+        <div class = "user">
+            <a href="/carrito"><i class="far fa-handshake"></i></a>
+            <a href=""> <i class="far fa-star"></i></a>
+            <a href=""><i class="far fa-user"></i></a> 
+        </div>
+        
+        <input class="buscar" type="text" placeholder="Buscar productos">
+        <i class="fas fa-search"></i>
+        
+        <div class="sub-cat">
+            <a href="/agregarProd">Agregar Producto  </a></i>
+            <a href="">Historial  </a></i>
+            <a href="">Ayuda  </a></i>
+        </div>
+        
+    </header>
+    
+    <img class = "banner" src = "/images/banner_3.png" alt = "Home Banner" width="340px">
+    
+    <!--<p class="frase"> "El lugar donde aquello que no usas se puede convertir en aquello que deseas" </p>-->
+
+   
+    <main>
+
+        <%- include ('./partials/products')%> 
+        
+
+    </main>
+
+    <%- include ('./partials/footer')%> 
+
+</body>
+</html>
