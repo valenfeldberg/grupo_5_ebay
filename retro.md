@@ -15,3 +15,42 @@ No identificamos ninguna actividad que estemos haciendo que no nos genere valor 
 
 ### 5. Dejar de hacer: 
 Al igual que en "Hacer menos" no vemos actividades en este estado
+
+##
+
+## Retrospectiva del Sprint 2
+
+### 1. Comenzar a hacer:
+Agregar valor a lo requerido por el sprint, Realizar más trabajo de búsqueda de funcionalidades, Agregar reuniones cortas
+
+### 2. Hacer mas: 
+Mejorar la parte estética y Estandarizar estilos
+
+### 3. Continuar haciendo: 
+Seguir haciendo funcional la página y Cumpliendo los vencimientos
+
+### 4. Hacer menos: 
+No identificamos ninguna actividad que estemos haciendo que no nos genere valor al proyecto
+
+### 5. Dejar de hacer: 
+Al igual que en "Hacer menos" no vemos actividades en este estado
+
+##
+
+## Retrospectiva del Sprint 3
+
+### 1. Comenzar a hacer:
+Tener completas las actividades de sprint anteriores para evitar que se acumulen pendientes
+
+### 2. Hacer mas: 
+Mejorar la parte estética y Estandarizar estilos y optimizar codigo
+
+### 3. Continuar haciendo: 
+Cumplir con las fechas de entrega de los sprints
+
+### 4. Hacer menos: 
+No identificamos ninguna actividad que estemos haciendo que no nos genere valor al proyecto
+
+### 5. Dejar de hacer: 
+Al igual que en "Hacer menos" no vemos actividades en este estado
+
