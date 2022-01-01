@@ -3,6 +3,8 @@ const app = express()
 const port = 4000
 const path = require("path")
 app.use(express.static("public"));
+app.use(express.urlencoded({extended: false}));
+app.use(express.json())
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
@@ -44,3 +46,4 @@ app.use('/login', productRouter);
 app.use('/logged', productRouter);
 app.use('/carrito', productRouter);
 app.use('/register', productRouter);
+app.use('/productCreate', productRouter);

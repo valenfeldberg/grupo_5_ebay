@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 
+
 const productsFilePath = path.join(__dirname, './data/productos.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -34,7 +35,7 @@ const productController = {
       },
 
       create: (req, res) => {
-        res.render("productCreate")
+        res.render("productCreate", {})
       },
 
       getOne: (req, res ) => {
@@ -51,11 +52,47 @@ const productController = {
         }
       },
   
-      save: (req, res) => {
-        const product = req.body
-        console.log (req.body)
-        res.send("hola")
-    }
+        save: (req, res) => {
+         // const imagen = req.file.filename
+          const {nombre_producto, valor, ubicacion, usado } = req.body
+          const newProduct = {}
+          newProduct.id = products[products.length -1].id +1
+          newProduct.nombre_producto = nombre_producto
+          newProduct.valor = valor
+          newProduct.ubicacion = ubicacion
+          newProduct.usado = usado
+
+          console.log(newProduct.id)
+          //newProduct.imagen = imagen
+
+          products.push(newProduct)
+          fs.writeFileSync(productsFilePath, JSON.stringify(products))
+          res.redirect("/product")
+        }, 
+
+      /*save: (req, res) => {
+        const {nombre_producto, valor, ubicacion, usado, imagen} = req.body
+        const productId = products[products.length -1].id +1
+        const product = {
+          id: productId,
+          nombre_producto,
+          valor,
+          ubicacion,
+          usado,
+          imagen
+        }*/
+    
+
+        //products.push(products)
+        //console.log (req.body)
+        //console.log(productId)
+        //res.redirect("/product")
+       // res.send(201).json(products)
+    //}
+   
+    //save: function(req, res) {
+           //res.send(req.body)
+   // }
 }
 
 

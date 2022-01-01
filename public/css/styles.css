@@ -3,6 +3,7 @@ html{
     background-color: rgb(0, 0, 0);
 }
 
+
 h1 {
     color: white;
     text-align: center;
@@ -193,12 +194,24 @@ form {
     margin: -10px;
 }
 
+.control-formulario {
+    padding: 5px;
+    background-color: black;
+    color: white;
+    font-family: Roboto;
+    margin: 0px;
+  
+}
+
 .placeholder {
+    border-radius: 5px;
+    font-size: 15px;
     border-color: white;
     width: 100%;
     font-family: Roboto;
     border: 2px;
     padding: 3px;
+    height: 30px;
 }
 
 .user {
