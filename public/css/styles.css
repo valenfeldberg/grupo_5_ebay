@@ -299,3 +299,11 @@ form {
 .confirmarTrueque i{
     color: #8a8888;
 }
+
+.botonEditar {
+    color: black;
+    border-color: black;
+    border: solid 1px;
+    
+
+}

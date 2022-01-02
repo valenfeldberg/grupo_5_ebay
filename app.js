@@ -2,9 +2,11 @@ const express = require('express')
 const app = express()
 const port = 4000
 const path = require("path")
+const methodOverride = require('method-override');
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json())
+app.use(methodOverride('_method'));
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
@@ -42,6 +44,7 @@ app.use('/agregarProd', agrearProducto);*/
 const productRouter = require('./routes/product');
 app.use('/', productRouter);
 app.use('/product', productRouter);
+app.use('/misPublicaciones', productRouter);
 app.use('/login', productRouter);
 app.use('/logged', productRouter);
 app.use('/carrito', productRouter);

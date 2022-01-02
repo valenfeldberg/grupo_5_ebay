@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('./partials/head')%> 
+<body>
+  
+    <%- include ('./partials/header')%> 
+    
+     <h1>MODIFICAR PRODUCTO</h1>
+      
+        <form class="formato-formulario" action="./?_method=PUT" method="POST" class="create-form">   
+        <div class="control-formulario">
+            <label>Nombre del Producto</label>
+            <br>
+            <br>
+            <input type="text" name="nombre_producto" class="placeholder" placeholder="Ingrese nombre del producto a publicar" value=" <%= product.nombre_producto%>">
+        </div>
+        <br>
+        <div class="control-formulario">
+            <label>Valor</label>
+            <br>
+            <br>
+            <input type="text" name="valor" class="placeholder" placeholder="Indique el valor del producto a publicar"value=" <%= product.valor%>">
+        </div>
+        <div class="control-formulario">
+            <label>Localidad</label>
+            <br>
+            <br>
+            <input type="text" name="ubicacion" class="placeholder" placeholder="Indique la localiad donde se encuentra el producto"value=" <%= product.ubicacion%>">
+        </div>
+        <div class="control-formulario">
+            <label for="">¿Es nuevo o usado?</label>
+            <br>
+            <br>
+            <label for="">Usado</label>
+            <input type="radio" name="usado" value="true">
+            <label for="">Nuevo</label>
+            <input type="radio" name="usado" value="false">
+        </div>
+
+        <br>
+        <div class="control-formulario">
+            <label>Descripcion</label>
+            <br>
+            <br>
+            <input type="text" name="email" class="placeholder" placeholder="Indique una breve descripcion del producto"value=" <%= product.descripcion%>">
+        </div>
+        <br>
+
+        <br>
+        <div class="control-formulario">
+            <label>Fotos del Producto</label>
+            <input type="file" name="imagen">
+        </div>
+        <br>
+        <br>
+       
+        <button type="submit" class="boton-formulario">Enviar</button>
+        <button type="reset" class="boton-formulario">Borrar</button>
+    
+    </form>
+    </body>
+    
+    </html>

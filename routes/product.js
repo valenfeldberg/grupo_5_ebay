@@ -13,6 +13,14 @@ router.get('/register', productController.register);
 router.get('/productCreate', productController.create);
 router.get('/product/:id', productController.getOne);
 router.post('/productCreate', productController.save);
+router.get('/misPublicaciones', productController.getAllMisPublicaciones);
+router.delete('/product/:id', productController.delete);
+
+// Formulario de edición de productos (GET)
+router.get('/product/:id/productEdit', productController.edit);
+
+// Acción de edición (a donde se envía el formulario) (PUT)
+router.put('/product/:id', productController.update);
 
 
 

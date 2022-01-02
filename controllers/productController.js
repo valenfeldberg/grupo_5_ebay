@@ -14,6 +14,11 @@ const productController = {
       res.render("index", {product:product})
       },
 
+      getAllMisPublicaciones: (req, res ) => {
+        const product = products  
+        res.render("misPublicaciones", {product:product})
+        },
+
     login: (req, res ) => {
       const product = products  
       res.render("login", {})
@@ -70,29 +75,53 @@ const productController = {
           res.redirect("/product")
         }, 
 
-      /*save: (req, res) => {
-        const {nombre_producto, valor, ubicacion, usado, imagen} = req.body
-        const productId = products[products.length -1].id +1
-        const product = {
-          id: productId,
-          nombre_producto,
-          valor,
-          ubicacion,
-          usado,
-          imagen
-        }*/
+        delete: (req, res) => {
+          const paramId = parseInt (req.params.id)
+          const productIndex = products.findIndex(productElement => productElement.id === paramId)
+          products.splice(productIndex, 1)
+          res.redirect(`/misPublicaciones`)
+          //fs.writeFileSync(productsFilePath, JSON.stringify(products))
+         }, 
+
+         edit: (req, res) => {
+          
+          
+          const paramId = parseInt (req.params.id)
+          const product = products.find(productElement => productElement.id === paramId)
+        
+          if (product != null)
+          {
+            res.render("productEdit", {product})
+          }
+          else 
+          {
+        res.status(404).json({msg:"No esta el producto"})
+          }
+        
+        },
+          
+
+
+        update: (req, res) => {
+          const productId = parseInt (req.params.id)
+          const product = products.find(productElement => productElement.id === productId)
+          product.nombre_producto =  req.body.nombre_producto
+          product.valor = req.body.valor
+          product.ubicacion = req.body.ubicacion
+          product.descripcion = req.body.descripcion
+          
+          //fs.writeFileSync(productsFilePath, JSON.stringify(products))
+          res.redirect("/product")
+          
+
+        
+      },
+          
+      
+      
+
     
 
-        //products.push(products)
-        //console.log (req.body)
-        //console.log(productId)
-        //res.redirect("/product")
-       // res.send(201).json(products)
-    //}
-   
-    //save: function(req, res) {
-           //res.send(req.body)
-   // }
 }
 
 
