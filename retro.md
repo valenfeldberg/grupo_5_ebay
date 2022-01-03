@@ -59,13 +59,10 @@ Al igual que en "Hacer menos" no vemos actividades en este estado
 ## Retrospectiva del Sprint 4
 
 ### 1. Comenzar a hacer:
-Revisar y corregir pendientes y faltantes de sprints anteriores
-Utilizar organicamente Trello
-Incrementar la frecuencia de reuniones (weekly)
+Revisar y corregir pendientes y faltantes de sprints anteriores, utilizar organicamente Trello e incrementar la frecuencia de reuniones (weekly)
 
 ### 2. Hacer mas: 
-Mejorar la estetica del sitio
-Tomar ejemplos de sitios on line
+Mejorar la estetica del sitio, tomar ejemplos de sitios on line
 
 ### 3. Continuar haciendo: 
 CCumpliendo con los vencimientos
