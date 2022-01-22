@@ -5,70 +5,123 @@
     <header>
         <a class="logo" href="./"><p class="titulo">BARTER ⇄</p></a><br>
     </header>   
-    <form class="formato-formulario" action="/login" method="POST" class="create-form">
-        <div class="control-formulario">
-            <label></label>
-            <input type="text" name="nombre" class="placeholder" placeholder="Nombre y Apellido:">
-        </div>
-        <br>
-        <div class="control-formulario">
-            <label></label>
-            <input type="text" name="usuario" class="placeholder" placeholder="Nombre de usuari@">
-        </div>
-        <br>
-        <div class="control-formulario">
-            <label></label>
-            <input type="text" name="email" class="placeholder" placeholder="Dirección de email">
-        </div>
-        <br>
-        <div class=”control-formulario”>
-            <label for="">Fecha de Nacimiento:</label>
-            <input type="date" name="fecha" placeholder="Fecha de nacimiento">
-        </div>
-        <br>
-        <div class="control-formulario">
-            <label for=""></label>
-            <input type="text" name="domicilio" class="placeholder" placeholder="Domicilio">
-        </div>
-        <br>
-        <div class="control-formulario">
-            <label for="">Perfil del usuario:</label><br>
-            <label for="">Comprar</label>
-            <input type="radio" name="compra-venta" value="Comprar">
-            <label for="">Vender</label>
-            <input type="radio" name="compra-venta" value="Vender">
-        </div>
-        <br>
-        <div class="control-formulario">
-            <label>Categorias de interes:</label>
-            <select name="categoria">
-                <option value="">Seleccionar...</option>
-                <option value="">Electro</option>
-                <option value="">Moda</option>
-                <option value="">Hogar</option>	
-                <option value="">Jugueteria</option>
-                <option value="">Vida Sana</option>
-            </select>
-        </div>
-        <br>
-        <div class="control-formulario">
-            <label>Foto de Usuario:</label>
-            <input type="file" name="avatar">
-        </div>
-        <br>
-        <div class="control-formulario">
-            <label>Contraseña:</label>
-            <input type="password" name="contraseña" class="placeholder">
-        </div>
-
-        <div class="control-formulario">
-            <label>Confirmar Contraseña:</label>
-            <input type="password" name="contraseña" class="placeholder">
-        </div>
-        <br>
-        <button type="submit" class="boton-formulario">Enviar</button>
-        <button type="reset" class="boton-formulario">Borrar</button>
-    
-    </form>
+    <div class="container my-5">
+		<div class="row justify-content-center">
+			<div class="col-md-10">
+				<h2>Formulario de registro</h2>
+	
+				<form method="POST" action="/register" enctype="multipart/form-data">
+					<div class="row">
+						<div class="col-md-6 my-1">
+							<div class="form-group">
+								<label><b>first_name</b></label>
+								<input 
+									type="text" 
+									name="first_name" 
+									class="form-control <%= locals.errors && errors.first_name ? 'is-invalid' : null %>"
+									value="<%= locals.oldData ? oldData.first_name : null %>"
+								>
+								<% if (locals.errors && errors.first_name) { %>
+									<div class="text-danger">
+										<%= errors.first_name.msg %> 
+									</div>
+								<% } %>
+							</div>
+						</div>
+						<div class="col-md-6 my-1">
+							<div class="form-group">
+								<label><b>last_name</b></label>
+								<input 
+									type="text" 
+									name="last_name" 
+									class="form-control <%= locals.errors && errors.last_name ? 'is-invalid' : null %>"
+									value="<%= locals.oldData ? oldData.last_name : null %>"
+								>
+								<% if (locals.errors && errors.last_name) { %>
+									<div class="text-danger">
+										<%= errors.last_name.msg %> 
+									</div>
+								<% } %>
+							</div>
+						</div>
+						<div class="col-md-6 my-1">
+							<div class="form-group">
+								<label><b>Correo electrónico:</b></label>
+								<input 
+									type="text" 
+									name="email" 
+									class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+									value="<%= locals.oldData ? oldData.email : null %>"
+								>
+								<% if (locals.errors && errors.email) { %>
+									<div class="text-danger">
+										<%= errors.email.msg %>
+									</div>
+								<% } %>
+							</div>
+						</div>
+						<div class="col-md-6 my-1">
+							<div class="form-group">
+								<label><b>Password:</b></label>
+								<input 
+									type="password" 
+									name="password" 
+									class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+								>
+								<% if (locals.errors && errors.password) { %>
+									<div class="text-danger">
+										<%= errors.password.msg %>
+									</div>
+								<% } %>
+							</div>
+						</div>
+						<div class="col-md-6 my-1">
+							<div class="form-group">
+								<label><b>País de nacimiento:</b></label>
+								<select 
+									name="country" 
+									class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>"
+								>
+									<option value="">Elegí un país</option>
+									<%  
+										let countries = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay', 'Venezuela'];
+									%>
+									<% for (const oneCountry of countries) { %>
+										<option 
+											value="<%= oneCountry %>"
+											<%= locals.oldData && (oneCountry === oldData.country) ? 'selected' : null %> 
+										> <%= oneCountry %> </option>
+									<% } %>
+								</select>
+								<% if (locals.errors && errors.country) { %>
+									<div class="text-danger">
+										<%= errors.country.msg %>
+									</div>
+								<% } %>
+							</div>
+						</div>
+						<div class="col-md-6 my-1">
+							<div class="form-group">
+								<label><b>Imagen de perfil:</b></label>
+								<input 
+									type="file" 
+									name="avatar"
+									class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
+								>
+								<% if (locals.errors && errors.avatar) { %>
+									<div class="text-danger">
+										<%= errors.avatar.msg %>
+									</div>
+								<% } %>
+							</div>
+						</div>
+						<div class="col-12 my-3">
+							<button type="submit" class="btn btn-primary">Registrarse</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

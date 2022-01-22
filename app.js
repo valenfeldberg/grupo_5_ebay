@@ -42,11 +42,13 @@ app.use('/agregarProd', agrearProducto);*/
 // Sprint 4
 
 const productRouter = require('./routes/product');
+const loginRouter = require("./routes/login")
+
 app.use('/', productRouter);
 app.use('/product', productRouter);
 app.use('/misPublicaciones', productRouter);
-app.use('/login', productRouter);
-app.use('/logged', productRouter);
+app.use('/', loginRouter);
+app.use('/logged', loginRouter);
+app.use('/', loginRouter);
 app.use('/carrito', productRouter);
-app.use('/register', productRouter);
 app.use('/productCreate', productRouter);

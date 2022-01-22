@@ -9,16 +9,17 @@
     <a href="/"><i class="fas fa-arrow-left"> </i> </a>
     <p class = "bienvenido" ><b>¡Bienvenido!</b></p>
     
-    <form action="logged" method="get" class="create-form">
-        <div class="usuario">
-            <input type="email" name="email" class="control" placeholder="Email">
-        </div>
+    <form method="POST" action="./login">
+        <label><b>Correo electrónico:</b></label>
+        <input type="text" name="email" class="form-control">
+        <div class="invalid-feedback">
 
         <div class="usuario">
-            <input type="password" name="contraseña" class="control" placeholder="Contraseña">
+            <label><b>Password:</b></label>
+            <input type="password" name="password" class="form-control">
         </div>
 
-        <button type="submit" class="ingresar">Ingresar</button>
+        <button type="submit" class="btn btn-primary">Registrarse</button>
     </form>
 </body>
 </html>
