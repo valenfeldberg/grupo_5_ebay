@@ -2,6 +2,8 @@ const { validationResult } = require('express-validator');
 const fs = require("fs");
 const path = require("path");
 const bcryptjs = require("bcryptjs")
+const session = require("express-session")
+
 
 const usersFilePath = path.join(__dirname, "./data/users.json");
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
@@ -41,30 +43,23 @@ const controller = {
 					},
 					oldData: req.body
 					})
-			  } else {
-				
-	
+			  } else {						
+						const { first_name, last_name, email, gender, ubicacion, password } = req.body;
+						const newUser = {};
+						newUser.id = users[users.length - 1].id + 1;
+						newUser.first_name = first_name;
+						newUser.last_name = last_name;
+						newUser.email = email;
+						newUser.gender = gender;
+						newUser.ubicacion = ubicacion;
+						newUser.password = bcryptjs.hashSync(password)
+						newUser.imagen = "/images/avatars/" + req.file.filename;
+						console.log(newUser.id);
 
-	
-		//	return res.send('Ok, las validaciones se pasaron y no tienes errores');
-	
-	const { first_name, last_name, email, gender, ubicacion, password } = req.body;
-    const newUser = {};
-    newUser.id = users[users.length - 1].id + 1;
-    newUser.first_name = first_name;
-    newUser.last_name = last_name;
-    newUser.email = email;
-    newUser.gender = gender;
-	newUser.ubicacion = ubicacion;
-	newUser.password = bcryptjs.hashSync(password)
-    newUser.imagen = "/images/avatars/" + req.file.filename;
-    console.log(newUser.id);
-
-    users.push(newUser);
-    fs.writeFileSync(usersFilePath, JSON.stringify(users));
-	res.redirect("/login");
-    
-			  }
+						users.push(newUser);
+						fs.writeFileSync(usersFilePath, JSON.stringify(users));
+						res.redirect("/userDetail/" + newUser.id);		
+				}
 
 	},
 
@@ -86,34 +81,22 @@ const controller = {
 	},
 	
 	processLogin: (req, res) => {
-		/*const resultValidation = validationResult(req);
-		
-		if (resultValidation.errors.length > 0) {
-			return res.render('login', {
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			});
-		}*/
-		
 		const userInDb = (req.body.email);
 		const user = users.find(
 		  (userElement) => userElement.email === userInDb
 		);
-		console.log(user)
 					
 			if (user != null) {
 				return res.render("login", {
 					errors: {
 						email: {
-							msg: "NO se encuentra este email en nuestra bsae de datos"
+							msg: "Este email ya esta registrado"
 						}
 					},
 					oldData: req.body
 					})
-			  } else {
-				  res.send("hola")
-			  }
-
+			  } else {	
+				  res.send("no esta el mail")	}
 	},
 	  
 	profile: (req, res) => {
