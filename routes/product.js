@@ -17,7 +17,7 @@ const upload = multer({ storage });
 
 router.get("/", productController.getAll);
 router.get("/product", productController.getAll);
-router.get("/login", productController.login);
+
 router.get("/logged", productController.logged);
 router.get("/carrito", productController.carrito);
 router.get("/register", productController.register);

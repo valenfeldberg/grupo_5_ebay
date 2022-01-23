@@ -10,12 +10,18 @@
 
     <main>
 
+        <div class = "userDetail"> 
+         <img class = "" src= "<%- user.imagen %>" alt = "imagen" width = "140px">
+        </div>
         <div > 
-            <p class = "tituloArticulo"><b><%- user.first_name %></b></p>
-            <p class = "tituloArticulo"><b><%- user.last_name %></b></p>
-            <p class = "tituloArticulo"><b><%- user.email_name %></b></p>
-            <p class = "tituloArticulo"><b><%- user.gender %></b></p>
-            <img src= "<%- user.imagen %>" alt = "imagen" width = "140px">
+           
+            <p class = "tituloArticulo"><b>Nombre: <%- user.first_name %> <%- user.last_name %></b></p>
+            <p class = "tituloArticulo"><b>Ubicacion: <%- user.ubicacion %></b></p>
+            <p class = "tituloArticulo"><b>Email: <%- user.email %></b></p>
+            <p class = "tituloArticulo"><b>Email: <%- user.gender %></b></p>
+            <p class = "tituloArticulo"><b>Password: <%- user.password %></b></p>
+         
+          
             </ul>
         </div>
 
@@ -25,7 +31,7 @@
             <br>
                 <button type="submit" class="boton-formulario">Borrar</button>
             <br>
-            </form>
+        </form>
 
        
 

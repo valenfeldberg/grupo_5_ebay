@@ -1,0 +1,18 @@
+<div>
+    <a href="/product">  <p class = "publicaciones"><b>USUARIOS</b></p></a>
+</div>
+
+<% for (let i = 0; i < user.length; i++) { %>
+    <article>
+
+            <a href="./userDetail/<%- user[i].id %>"> <img src= "<%- user[i].imagen %>" alt = "Parlante" width = "340px" ></a>
+
+            <section>
+                <p class = "articulo"><b>Nombre: <%- user[i].first_name %> <%- user[i].last_name %></b></p>
+                <p class="ubicacion"><i class="fas fa-map-marked-alt"></i><%- user[i].ubicacion %></i></p>
+                <p class = "articulo"><b>Email: <%- user[i].email %></b></p>
+                <p class = "articulo"><b>Genero: <%- user[i].gender %></b></p>           
+            </section>
+    
+    </article>
+<% } %>

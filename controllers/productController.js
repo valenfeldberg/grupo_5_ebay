@@ -15,10 +15,7 @@ const productController = {
     res.render("misPublicaciones", { product: product });
   },
 
-  login: (req, res) => {
-    const product = products;
-    res.render("login", {});
-  },
+
 
   logged: (req, res) => {
     const product = products;

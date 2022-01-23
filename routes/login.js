@@ -46,6 +46,9 @@ const validations = [
 ]
 
 // Formulario de registro
+router.get('/users', loginController.users);
+
+// Formulario de registro
 router.get('/register', loginController.register);
 
 // Procesar el registro
@@ -54,6 +57,10 @@ router.post('/register', uploadFile.single('avatar'), validations, loginControll
 
 // Formulario de login
 router.get('/login', loginController.login);
+
+// Procesar el login
+router.post('/login', validations, loginController.processLogin);
+
 
 // Perfil de Usuario
 router.get('/userDetail/:id', loginController.profile);
