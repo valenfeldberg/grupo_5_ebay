@@ -2,7 +2,9 @@ const { validationResult } = require('express-validator');
 const fs = require("fs");
 const path = require("path");
 const bcryptjs = require("bcryptjs")
-const session = require("express-session")
+const session = require("express-session");
+const { send } = require('process');
+const req = require('express/lib/request');
 
 
 const usersFilePath = path.join(__dirname, "./data/users.json");
@@ -16,6 +18,7 @@ const controller = {
 	  },
 
 	register: (req, res) => {
+		
 		return res.render('register');
 	},
 	processRegister: (req, res) => {
@@ -77,29 +80,71 @@ const controller = {
 
 	
 	login: (req, res) => {
+	
 		return res.render('login');
 	},
 	
-	processLogin: (req, res) => {
+	processLogin: (req, res) => {		
 		const userInDb = (req.body.email);
 		const user = users.find(
 		  (userElement) => userElement.email === userInDb
 		);
 					
-			if (user != null) {
+			if (user == null) {
 				return res.render("login", {
 					errors: {
 						email: {
-							msg: "Este email ya esta registrado"
+							msg: "No se encuentra este email en nuestra bases de datos"
 						}
 					},
 					oldData: req.body
 					})
 			  } else {	
-				  res.send("no esta el mail")	}
+				 
+				const isOkPassword = bcryptjs.compareSync(req.body.password, user.password)
+				  if (isOkPassword) {
+				 // delete user.password
+				  req.session.userLogged = user	
+
+				  if(req.body.remember_user) {
+					
+					  res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 2})
+					  
+				  }			 
+				  return res.redirect("/")
+			  	}
+					return res.render("login", {
+						errors: {
+							email: {
+								msg: "La contraseña es incorrecta"
+							}
+						},
+							oldData: req.body
+				})
+			}
+		
+		
+		
+		/*
+		const resultValidation = validationResult(req);
+		
+		if (resultValidation.errors.length > 0) {
+			return res.render('login', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+				
+			}*/
 	},
 	  
 	profile: (req, res) => {
+		
+		return res.render("userDetail", {
+			user: req.session.userLogged
+		})
+		
+		/*
 		const paramId = parseInt(req.params.id);
 		const user = users.find(
 		  (userElement) => userElement.id === paramId
@@ -110,8 +155,13 @@ const controller = {
 		} else {
 		  res.status(404).json({ msg: "No esta el usuario" });
 		 
-		}
+		}*/
 	},
+
+	logout:(req, res) => {
+		req.session.destroy
+		return res.redirect("/")
+	}
 }
 
 module.exports = controller;

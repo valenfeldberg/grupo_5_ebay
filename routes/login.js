@@ -3,6 +3,8 @@ var router = express.Router();
 const loginController = require("../controllers/loginController");
 const multer = require("multer");
 const path = require("path");
+const guestMiddleware = require("../middlewares/guestMiddleware")
+const authMiddleware = require("../middlewares/authMiddleware")
 
 const { body } = require('express-validator');
 
@@ -46,23 +48,26 @@ const validations = [
 ]
 
 // Formulario de registro
-router.get('/users', loginController.users);
+router.get('/users',  loginController.users);
 
 // Formulario de registro
-router.get('/register', loginController.register);
+router.get('/register', guestMiddleware, loginController.register);
 
 // Procesar el registro
 router.post('/register', uploadFile.single('avatar'), validations, loginController.processRegister);
 
 
 // Formulario de login
-router.get('/login', loginController.login);
+router.get('/login', guestMiddleware, loginController.login);
 
 // Procesar el login
 router.post('/login', validations, loginController.processLogin);
 
 // Perfil de Usuario
-router.get('/userDetail/:id', loginController.profile);
+router.get('/userDetail', authMiddleware, loginController.profile);
+
+// Perfil de Usuario
+router.get('/logout', loginController.logout);
 
 // Borrar Perfil de Usuario
 router.delete("/userDetail/:id", loginController.delete);

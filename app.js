@@ -3,11 +3,24 @@ const app = express()
 const port = 4000
 const path = require("path")
 const methodOverride = require('method-override');
+const session = require("express-session")
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
+const cookies = require ("cookie-parser")
+
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json())
 app.use(methodOverride('_method'));
-const session = require("express-session")
+
+
+app.use(session({
+  secret: "Nuestro mensaje secreto",
+  resave: false,
+  saveUninitialized: false
+} ))
+
+app.use(userLoggedMiddleware)
+app.use(cookies())
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
@@ -53,4 +66,4 @@ app.use('/logged', loginRouter);
 app.use('/', loginRouter);
 app.use('/carrito', productRouter);
 app.use('/productCreate', productRouter);
-app.use(session( {secret: "Nuestro mensaje secreto"} ))
+
