@@ -18,14 +18,14 @@
             <p class = "tituloArticulo"><b>Nombre: <%- user.first_name %> <%- user.last_name %></b></p>
             <p class = "tituloArticulo"><b>Ubicacion: <%- user.ubicacion %></b></p>
             <p class = "tituloArticulo"><b>Email: <%- user.email %></b></p>
-            <p class = "tituloArticulo"><b>Email: <%- user.gender %></b></p>
+          
             
          
           
             </ul>
         </div>
 
-        <form class="" action="./<%- user.id %>?_method=DELETE" method="POST" class="create-form">
+        <form class="" action="./userDetail/<%- user.id %>?_method=DELETE" method="POST" class="create-form">
             <label for="">¿Eliminar Usuario?</label>
             <br>
             <br>

@@ -3,6 +3,8 @@ var router = express.Router();
 const productController = require("../controllers/productController");
 const multer = require("multer");
 const path = require("path");
+const guestMiddleware = require("../middlewares/guestMiddleware")
+const authMiddleware = require("../middlewares/authMiddleware")
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -21,10 +23,10 @@ router.get("/product", productController.getAll);
 router.get("/logged", productController.logged);
 router.get("/carrito", productController.carrito);
 
-router.get("/productCreate", productController.create);
+router.get("/productCreate", authMiddleware, productController.create);
 router.get("/product/:id", productController.getOne);
 router.post("/productCreate", upload.single("imagen"), productController.save);
-router.get("/misPublicaciones", productController.getAllMisPublicaciones);
+router.get("/misPublicaciones", authMiddleware, productController.getAllMisPublicaciones);
 router.delete("/product/:id", productController.delete);
 
 // Formulario de edición de productos (GET)

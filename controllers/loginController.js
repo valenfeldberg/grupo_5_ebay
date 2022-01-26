@@ -47,21 +47,21 @@ const controller = {
 					oldData: req.body
 					})
 			  } else {						
-						const { first_name, last_name, email, gender, ubicacion, password } = req.body;
+						const { first_name, last_name, email, gender, country, password } = req.body;
 						const newUser = {};
 						newUser.id = users[users.length - 1].id + 1;
 						newUser.first_name = first_name;
 						newUser.last_name = last_name;
 						newUser.email = email;
 						newUser.gender = gender;
-						newUser.ubicacion = ubicacion;
+						newUser.ubicacion = country;
 						newUser.password = bcryptjs.hashSync(password)
 						newUser.imagen = "/images/avatars/" + req.file.filename;
 						console.log(newUser.id);
 
 						users.push(newUser);
 						fs.writeFileSync(usersFilePath, JSON.stringify(users));
-						res.redirect("/userDetail/" + newUser.id);		
+						res.redirect("/login");		
 				}
 
 	},
@@ -72,8 +72,8 @@ const controller = {
 		  (userElement) => userElement.id === paramId
 		);
 		users.splice(userIndex, 1);
-		res.redirect(`/misPublicaciones`);
-		fs.writeFileSync(usersFilePath, JSON.stringify(products))
+		res.redirect(`/logout`);
+		fs.writeFileSync(usersFilePath, JSON.stringify(users))
 	  },
 
 
@@ -111,7 +111,7 @@ const controller = {
 					  res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 2})
 					  
 				  }			 
-				  return res.redirect("/")
+				  return res.redirect("userDetail")
 			  	}
 					return res.render("login", {
 						errors: {
@@ -158,8 +158,8 @@ const controller = {
 		}*/
 	},
 
-	logout:(req, res) => {
-		req.session.destroy
+	logout:(req, res) => {	
+		req.session.destroy()
 		return res.redirect("/")
 	}
 }
