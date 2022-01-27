@@ -11,7 +11,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json())
 app.use(methodOverride('_method'));
-
+app.use(cookies())
 
 app.use(session({
   secret: "Nuestro mensaje secreto",
@@ -20,7 +20,7 @@ app.use(session({
 } ))
 
 app.use(userLoggedMiddleware)
-app.use(cookies())
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

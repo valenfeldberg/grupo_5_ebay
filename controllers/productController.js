@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-
+const { validationResult } = require('express-validator');
 const productsFilePath = path.join(__dirname, "./data/productos.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
@@ -50,6 +50,16 @@ const productController = {
   },
 
   save: (req, res) => {
+
+    const resultValidation = validationResult(req);
+		console.log(resultValidation)
+		if (resultValidation.errors.length > 0) {
+			return res.render('productCreate', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+
     // const imagen = req.file.filename
     const { nombre_producto, valor, ubicacion, usado } = req.body;
     const newProduct = {};

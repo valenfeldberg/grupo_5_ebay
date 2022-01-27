@@ -108,7 +108,7 @@ const controller = {
 
 				  if(req.body.remember_user) {
 					
-					  res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 2})
+					  res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 60})
 					  
 				  }			 
 				  return res.redirect("userDetail")
@@ -159,6 +159,7 @@ const controller = {
 	},
 
 	logout:(req, res) => {	
+		res.clearCookie("userEmail")
 		req.session.destroy()
 		return res.redirect("/")
 	}

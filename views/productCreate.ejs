@@ -14,6 +14,11 @@
             <br>
             <br>
             <input type="text" name="nombre_producto" class="placeholder" placeholder="Ingrese nombre del producto a publicar">
+            <% if (locals.errors && errors.nombre_producto) { %>
+                <div class="text-danger">
+                    <%= errors.nombre_producto.msg %> 
+                </div>
+            <% } %>
         </div>
         <br>
         <div class="control-formulario">
@@ -21,12 +26,23 @@
             <br>
             <br>
             <input type="text" name="valor" class="placeholder" placeholder="Indique el valor del producto a publicar">
+            <% if (locals.errors && errors.valor) { %>
+                <div class="text-danger">
+                    <%= errors.valor.msg %> 
+                </div>
+            <% } %>
+       
         </div>
         <div class="control-formulario">
             <label>Localidad</label>
             <br>
             <br>
             <input type="text" name="ubicacion" class="placeholder" placeholder="Indique la localiad donde se encuentra el producto">
+            <% if (locals.errors && errors.ubicacion) { %>
+                <div class="text-danger">
+                    <%= errors.ubicacion.msg %> 
+                </div>
+            <% } %>
         </div>
         <div class="control-formulario">
             <label for="">¿Es nuevo o usado?</label>
@@ -43,7 +59,12 @@
             <label>Descripcion</label>
             <br>
             <br>
-            <input type="text" name="email" class="placeholder" placeholder="Indique una breve descripcion del producto">
+            <input type="text" name="descripcion" class="placeholder" placeholder="Indique una breve descripcion del producto">
+            <% if (locals.errors && errors.descripcion) { %>
+                <div class="text-danger">
+                    <%= errors.descripcion.msg %> 
+                </div>
+            <% } %>
         </div>
         <br>
         <%/* comment         <div class=”control-formulario”>
@@ -78,6 +99,11 @@
         <div class="control-formulario">
             <label>Fotos del Producto</label>
             <input type="file" name="imagen">
+            <% if (locals.errors && errors.imagen) { %>
+                <div class="text-danger">
+                    <%= errors.imagen.msg %>
+                </div>
+            <% } %>
         </div>
         <br>
         <br>
