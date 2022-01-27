@@ -62,7 +62,7 @@ app.use('/', productRouter);
 app.use('/product', productRouter);
 app.use('/misPublicaciones', productRouter);
 app.use('/', loginRouter);
-app.use('/logged', loginRouter);
+//app.use('/logged', loginRouter);
 app.use('/', loginRouter);
 app.use('/carrito', productRouter);
 app.use('/productCreate', productRouter);

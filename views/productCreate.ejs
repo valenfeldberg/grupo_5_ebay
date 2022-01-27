@@ -13,7 +13,8 @@
             <label>Nombre del Producto</label>
             <br>
             <br>
-            <input type="text" name="nombre_producto" class="placeholder" placeholder="Ingrese nombre del producto a publicar">
+            <input type="text" name="nombre_producto" class="placeholder" placeholder="Ingrese nombre del producto a publicar"
+            value="<%= locals.oldData ? oldData.nombre_producto : null %>">
             <% if (locals.errors && errors.nombre_producto) { %>
                 <div class="text-danger">
                     <%= errors.nombre_producto.msg %> 
@@ -25,7 +26,8 @@
             <label>Valor</label>
             <br>
             <br>
-            <input type="text" name="valor" class="placeholder" placeholder="Indique el valor del producto a publicar">
+            <input type="text" name="valor" class="placeholder" placeholder="Indique el valor del producto a publicar"
+            value="<%= locals.oldData ? oldData.valor : null %>">
             <% if (locals.errors && errors.valor) { %>
                 <div class="text-danger">
                     <%= errors.valor.msg %> 
@@ -37,7 +39,8 @@
             <label>Localidad</label>
             <br>
             <br>
-            <input type="text" name="ubicacion" class="placeholder" placeholder="Indique la localiad donde se encuentra el producto">
+            <input type="text" name="ubicacion" class="placeholder" placeholder="Indique la localiad donde se encuentra el producto"
+            value="<%= locals.oldData ? oldData.ubicacion : null %>">
             <% if (locals.errors && errors.ubicacion) { %>
                 <div class="text-danger">
                     <%= errors.ubicacion.msg %> 
@@ -59,7 +62,8 @@
             <label>Descripcion</label>
             <br>
             <br>
-            <input type="text" name="descripcion" class="placeholder" placeholder="Indique una breve descripcion del producto">
+            <input type="text" name="descripcion" class="placeholder" placeholder="Indique una breve descripcion del producto"
+            value="<%= locals.oldData ? oldData.descripcion : null %>">
             <% if (locals.errors && errors.descripcion) { %>
                 <div class="text-danger">
                     <%= errors.descripcion.msg %> 

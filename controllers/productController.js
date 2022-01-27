@@ -17,15 +17,15 @@ const productController = {
 
 
 
-  logged: (req, res) => {
-    const product = products;
-    res.render("logged", { product: product });
-  },
+ // logged: (req, res) => {
+ //   const product = products;
+ //   res.render("logged", { product: product });
+ // },
 
-  carrito: (req, res) => {
-    const product = products;
-    res.render("carrito", { product: product });
-  },
+//  carrito: (req, res) => {
+//   const product = products;
+//    res.render("carrito", { product: product });
+// },
 
   register: (req, res) => {
     const product = products;

@@ -47,8 +47,8 @@ const validations = [
 router.get("/", productController.getAll);
 router.get("/product", productController.getAll);
 
-router.get("/logged", productController.logged);
-router.get("/carrito", productController.carrito);
+//router.get("/logged", productController.logged);
+//router.get("/carrito", productController.carrito);
 
 router.get("/productCreate", authMiddleware,  productController.create);
 router.get("/product/:id", productController.getOne);
