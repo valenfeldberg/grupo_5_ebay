@@ -6,26 +6,25 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const productController = {
   getAll: (req, res) => {
+
     const product = products;
     res.render("index", { product: product });
   },
 
-  getAllMisPublicaciones: (req, res) => {
-    const product = products;
-    res.render("misPublicaciones", { product: product });
+  filtro: (req,res) => {
+    const palabaBusqueda = req.body.buscar.toLowerCase();
+    var item = products.filter(item=>item.nombre_producto.toLowerCase().includes(palabaBusqueda));
+    res.render("index", { product: item });
   },
 
 
+   
 
- // logged: (req, res) => {
- //   const product = products;
- //   res.render("logged", { product: product });
- // },
-
-//  carrito: (req, res) => {
-//   const product = products;
-//    res.render("carrito", { product: product });
-// },
+  getAllMisPublicaciones: (req, res) => {
+    const userLogged = req.session.userLogged.email;
+    const articulosDelUsuario = products.filter(elements => elements.usuario == userLogged);
+    res.render("misPublicaciones", { product: articulosDelUsuario });
+  },
 
   register: (req, res) => {
     const product = products;
@@ -70,6 +69,7 @@ const productController = {
     newProduct.usado = usado;
     newProduct.imagen = "/images/" + req.file.filename;
     console.log(newProduct.id);
+    newProduct.usuario = req.session.userLogged.email
     //newProduct.imagen = imagen
 
     products.push(newProduct);

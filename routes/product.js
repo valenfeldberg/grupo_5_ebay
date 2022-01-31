@@ -43,7 +43,7 @@ const validations = [
 	})
 ]
 
-
+router.post("/",  productController.filtro);
 router.get("/", productController.getAll);
 router.get("/product", productController.getAll);
 
@@ -61,5 +61,7 @@ router.get("/product/:id/productEdit", productController.edit);
 
 // Acción de edición (a donde se envía el formulario) (PUT)
 router.put("/product/:id", productController.update);
+
+
 
 module.exports = router;
