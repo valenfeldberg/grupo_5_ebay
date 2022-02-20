@@ -1,20 +1,38 @@
+let db = require("../database/models")
+const Op = db.Sequelize.Op
 const fs = require("fs");
 const path = require("path");
 const { validationResult } = require('express-validator');
 const productsFilePath = path.join(__dirname, "./data/productos.json");
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+//const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const productController = {
-  getAll: (req, res) => {
 
-    const product = products;
-    res.render("index", { product: product });
-  },
+  // prueba db
+	crear: function (req, res) {
+		db.Usuario.findAll()
+			.then(function(productosdb) {
+				return res.json(productosdb)
+			})
+	},
+
+  getAll: (req, res) => {
+    db.Producto.findAll()
+    .then(function(products) {
+      return res.render("index", { product: products });
+    })
+	},
+  
 
   filtro: (req,res) => {
     const palabaBusqueda = req.body.buscar.toLowerCase();
-    var item = products.filter(item=>item.nombre_producto.toLowerCase().includes(palabaBusqueda));
-    res.render("index", { product: item });
+    db.Producto.findAll({
+      where: {
+        nombre_producto: {[Op.like]:"%"+palabaBusqueda+"%"}
+      }
+    }).then(function(products) {
+      return res.render("index", { product: products });
+    })   
   },
 
 
@@ -22,8 +40,30 @@ const productController = {
 
   getAllMisPublicaciones: (req, res) => {
     const userLogged = req.session.userLogged.email;
-    const articulosDelUsuario = products.filter(elements => elements.usuario == userLogged);
-    res.render("misPublicaciones", { product: articulosDelUsuario });
+    db.Usuario.findAll({
+      where: {
+        email: userLogged
+      }
+    }).then(function(user) {
+      const usuarioEnUso = user[0].id
+      
+      db.Producto.findAll({
+        where: {
+          user_id: {[Op.like]:"%"+usuarioEnUso+"%"}
+        }
+      }).then(function(products) {
+        return res.render("misPublicaciones", { product: products });
+      })     
+
+
+   
+    })
+    
+    
+    
+   
+  //  const articulosDelUsuario = products.filter(elements => elements.usuario == userLogged);
+  //  res.render("misPublicaciones", { product: articulosDelUsuario });
   },
 
   register: (req, res) => {
@@ -37,19 +77,13 @@ const productController = {
 
   getOne: (req, res) => {
     const paramId = parseInt(req.params.id);
-    const product = products.find(
-      (productElement) => productElement.id === paramId
-    );
-
-    if (product != null) {
-      res.render("productDetail", { product });
-    } else {
-      res.status(404).json({ msg: "No esta el producto" });
-    }
+    db.Producto.findByPk(paramId)
+    .then(function(product) {
+      res.render("productDetail", {product:product})
+    })
   },
 
-  save: (req, res) => {
-
+  save: (req, res) => {/*
     const resultValidation = validationResult(req);
 		console.log(resultValidation)
 		if (resultValidation.errors.length > 0) {
@@ -57,10 +91,21 @@ const productController = {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
-		}
+		}*/
 
+    db.Producto.create({
+        nombre_producto: req.body.nombre_producto,
+        valor: req.body.valor,
+        ubicacion: req.body.ubicacion,
+        usado: req.body.usado,
+        imagen : "/images/" + req.file.filename,
+        descripcion: req.body.descripcion,    
+        user_id : 2
+    })
+    console.log(req.body)
+    res.redirect("/product")
     // const imagen = req.file.filename
-    const { nombre_producto, valor, ubicacion, usado } = req.body;
+    /*const { nombre_producto, valor, ubicacion, usado } = req.body;
     const newProduct = {};
     newProduct.id = products[products.length - 1].id + 1;
     newProduct.nombre_producto = nombre_producto;
@@ -74,7 +119,7 @@ const productController = {
 
     products.push(newProduct);
     fs.writeFileSync(productsFilePath, JSON.stringify(products));
-    res.redirect("/product");
+    res.redirect("/product");*/
   },
 
   delete: (req, res) => {
@@ -89,18 +134,17 @@ const productController = {
 
   edit: (req, res) => {
     const paramId = parseInt(req.params.id);
-    const product = products.find(
-      (productElement) => productElement.id === paramId
-    );
-
-    if (product != null) {
-      res.render("productEdit", { product });
-    } else {
-      res.status(404).json({ msg: "No esta el producto" });
-    }
+    db.Producto.findByPk(paramId)
+    .then(function(product) {
+      res.render("productDetail", {product:product})
+    })
   },
 
   update: (req, res) => {
+
+
+
+    
     const productId = parseInt(req.params.id);
     const product = products.find(
       (productElement) => productElement.id === productId

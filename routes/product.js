@@ -51,6 +51,8 @@ router.get("/product", productController.getAll);
 //router.get("/carrito", productController.carrito);
 
 router.get("/productCreate", authMiddleware,  productController.create);
+// prueba db
+router.get("/productCrear",  productController.crear);
 router.get("/product/:id", productController.getOne);
 router.post("/productCreate", upload.single("imagen"), validations, productController.save);
 router.get("/misPublicaciones", authMiddleware,  productController.getAllMisPublicaciones);
