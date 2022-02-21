@@ -1,4 +1,6 @@
 
+let db = require("../database/models")
+const Op = db.Sequelize.Op
 const { validationResult } = require('express-validator');
 const fs = require("fs");
 const path = require("path");
@@ -16,8 +18,14 @@ const controller = {
 
 
 	users: (req, res) => {
-		const user = users;
-		res.render("users", { user: user });
+
+		db.Usuario.findAll()
+		.then(function(user) {
+		  return res.render("users", { user: user });
+		})
+		
+		/*const user = users;
+		res.render("users", { user: user });*/
 	  },
 
 	register: (req, res) => {

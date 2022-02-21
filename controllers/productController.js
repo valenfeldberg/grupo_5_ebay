@@ -8,14 +8,6 @@ const productsFilePath = path.join(__dirname, "./data/productos.json");
 
 const productController = {
 
-  // prueba db
-	crear: function (req, res) {
-		db.Usuario.findAll()
-			.then(function(productosdb) {
-				return res.json(productosdb)
-			})
-	},
-
   getAll: (req, res) => {
     db.Producto.findAll()
     .then(function(products) {
@@ -66,10 +58,10 @@ const productController = {
   //  res.render("misPublicaciones", { product: articulosDelUsuario });
   },
 
-  register: (req, res) => {
+ /* register: (req, res) => {
     const product = products;
     res.render("register", {});
-  },
+  },*/
 
   create: (req, res) => {
     res.render("productCreate", {});
@@ -131,13 +123,20 @@ const productController = {
   },
 
   delete: (req, res) => {
-    const paramId = parseInt(req.params.id);
+   db.Producto.destroy({
+     where: {
+       id:req.params.id
+     }
+   })
+   res.redirect(`/misPublicaciones`);
+   
+   /* const paramId = parseInt(req.params.id);
     const productIndex = products.findIndex(
       (productElement) => productElement.id === paramId
     );
     products.splice(productIndex, 1);
     res.redirect(`/misPublicaciones`);
-    //fs.writeFileSync(productsFilePath, JSON.stringify(products))
+    //fs.writeFileSync(productsFilePath, JSON.stringify(products))*/
   },
 
   edit: (req, res) => {
@@ -149,11 +148,21 @@ const productController = {
   },
 
   update: (req, res) => {
+          db.Producto.update({    
+            nombre_producto: req.body.nombre_producto,
+            valor: req.body.valor,
+            ubicacion: req.body.ubicacion,
+            usado: req.body.usado,
+            //imagen : "/images/" + req.file.filename,
+            descripcion: req.body.descripcion,
+          },{
+              where: {
+                      id:req.params.id
+                     }           
+        }) 
 
-
-
-    
-    const productId = parseInt(req.params.id);
+        res.redirect("/product/"+req.params.id)
+    /*const productId = parseInt(req.params.id);
     const product = products.find(
       (productElement) => productElement.id === productId
     );
@@ -163,7 +172,7 @@ const productController = {
     product.descripcion = req.body.descripcion;
 
     //fs.writeFileSync(productsFilePath, JSON.stringify(products))
-    res.redirect("/product");
+    res.redirect("/product");*/
   },
 };
 
