@@ -93,16 +93,24 @@ const productController = {
 			});
 		}*/
 
-    db.Producto.create({
-        nombre_producto: req.body.nombre_producto,
-        valor: req.body.valor,
-        ubicacion: req.body.ubicacion,
-        usado: req.body.usado,
-        imagen : "/images/" + req.file.filename,
-        descripcion: req.body.descripcion,    
-        user_id : 2
-    })
-    console.log(req.body)
+    const userLogged = req.session.userLogged.email;
+      db.Usuario.findAll({
+        where: {
+                email: userLogged
+              }
+          }).then(function(user) {
+          var usuarioActivo = user[0].id
+          db.Producto.create({    
+            nombre_producto: req.body.nombre_producto,
+            valor: req.body.valor,
+            ubicacion: req.body.ubicacion,
+            usado: req.body.usado,
+            imagen : "/images/" + req.file.filename,
+            descripcion: req.body.descripcion,    
+            user_id : usuarioActivo
+        })                
+          })
+
     res.redirect("/product")
     // const imagen = req.file.filename
     /*const { nombre_producto, valor, ubicacion, usado } = req.body;
@@ -136,7 +144,7 @@ const productController = {
     const paramId = parseInt(req.params.id);
     db.Producto.findByPk(paramId)
     .then(function(product) {
-      res.render("productDetail", {product:product})
+      res.render("productEdit", {product:product})
     })
   },
 
