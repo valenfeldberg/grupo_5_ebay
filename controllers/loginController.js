@@ -41,18 +41,44 @@ const controller = {
 				oldData: req.body
 			});
 		}
-		db.Usuario.create({    
-            first_name: req.body.first_name,
-            last_name: req.body.last_name,
-            email: req.body.email,
-            gender: req.body.gender,
-			password: bcryptjs.hashSync(req.body.password),
-			country: req.body.country,
-            imagen : "/images/avatars/" + req.file.filename,
-            descripcion: req.body.descripcion,   
-           
-        })                
-		res.redirect("/login");	
+		
+		db.Usuario.findAll({
+			where: {
+					email: req.body.email
+				  }
+			  }).then(function(user) {
+				
+				if (user.length < 1) {
+					 
+					db.Usuario.create({    
+						first_name: req.body.first_name,
+						last_name: req.body.last_name,
+						email: req.body.email,
+						gender: req.body.gender,
+						password: bcryptjs.hashSync(req.body.password),
+						country: req.body.country,
+						imagen : "/images/avatars/" + req.file.filename,
+						descripcion: req.body.descripcion,   
+					   
+					})      
+					res.redirect("/login");	
+				} else {
+				
+					return res.render("register", {
+						errors: {
+							email: {
+								msg: "Este email ya esta registrado"
+							}
+						},
+						oldData: req.body
+						})
+				  
+				  
+				}
+			  })
+
+		          
+		
 
 
 		/*
