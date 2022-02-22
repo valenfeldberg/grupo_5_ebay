@@ -41,8 +41,23 @@ const controller = {
 				oldData: req.body
 			});
 		}
+		db.Usuario.create({    
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            gender: req.body.gender,
+			password: bcryptjs.hashSync(req.body.password),
+			country: req.body.country,
+            imagen : "/images/avatars/" + req.file.filename,
+            descripcion: req.body.descripcion,   
+           
+        })                
+		res.redirect("/login");	
 
+
+		/*
 		// Busco si el usuario esta en la BD
+			
 		const userInDb = (req.body.email);
 		const user = users.find(
 		  (userElement) => userElement.email === userInDb
@@ -74,17 +89,25 @@ const controller = {
 						fs.writeFileSync(usersFilePath, JSON.stringify(users));
 						res.redirect("/login");		
 				}
-
+*/
 	},
 
 	delete: (req, res) => {
-		const paramId = parseInt(req.params.id);
+		
+		db.Usuario.destroy({
+			where: {
+			  id:req.params.id
+			}
+		  })
+		  res.redirect(`/logout`);
+		
+		/*const paramId = parseInt(req.params.id);
 		const userIndex = users.findIndex(
 		  (userElement) => userElement.id === paramId
 		);
 		users.splice(userIndex, 1);
 		res.redirect(`/logout`);
-		fs.writeFileSync(usersFilePath, JSON.stringify(users))
+		fs.writeFileSync(usersFilePath, JSON.stringify(users))*/
 	  },
 
 
@@ -96,7 +119,22 @@ const controller = {
 	},
 	
 	processLogin: (req, res) => {		
-		const userInDb = (req.body.email);
+		
+		db.Usuario.findAll({
+			where: {
+					email: req.body.email
+				  }
+			  }).then(function(user) {
+				  
+				if (user.length != 0) {
+					if (bcryptjs.compareSync(req.body.password, user[0].password)) {
+						req.session.userLogged = user[0]	
+						res.redirect("userDetail")
+							
+			  		}
+				}
+			  })
+		/*const userInDb = (req.body.email);
 		const user = users.find(
 		  (userElement) => userElement.email === userInDb
 		);
@@ -132,7 +170,7 @@ const controller = {
 						},
 							oldData: req.body
 				})
-			}
+			}*/
 		
 		
 		

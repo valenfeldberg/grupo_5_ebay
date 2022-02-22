@@ -73,3 +73,41 @@ No identificamos ninguna actividad que estemos haciendo que no nos genere valor 
 ### 5. Dejar de hacer: 
 Al igual que en "Hacer menos" no vemos actividades en este estado
 
+##
+
+## Retrospectiva del Sprint 5
+
+### 1. Comenzar a hacer:
+Incrementar la frecuencia semanal y carga horaria destinada al proyecto. Programar reuniones semanales
+
+### 2. Hacer mas: 
+Dedicar mas esfuerzo a la estetica y dinamica del sitio
+
+### 3. Continuar haciendo: 
+Cumpliendo con los vencimientos
+
+### 4. Hacer menos: 
+No identificamos ninguna actividad que estemos haciendo que no nos genere valor al proyecto
+
+### 5. Dejar de hacer: 
+Al igual que en "Hacer menos" no vemos actividades en este estado
+
+##
+
+## Retrospectiva del Sprint 6
+
+### 1. Comenzar a hacer:
+Dividir tareas entre todos los integrantes del equipo, fijar metas y plazos
+
+### 2. Hacer mas: 
+Dedicar mas esfuerzo a la estetica y dinamica del sitio. Resolver pendientes de sprints anteriores
+
+### 3. Continuar haciendo: 
+Cumpliendo con los vencimientos
+
+### 4. Hacer menos: 
+No dejar las actividaes para el final del Sprint
+
+### 5. Dejar de hacer: 
+Dejar todo para ultimo momento
+
