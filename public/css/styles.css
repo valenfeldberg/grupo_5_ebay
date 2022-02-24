@@ -1,5 +1,9 @@
 /* test */
 
+div.errores {
+color: red;    
+}
+
 .text-danger {
     color: red
 }
