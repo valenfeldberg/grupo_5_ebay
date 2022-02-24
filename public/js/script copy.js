@@ -1,7 +1,7 @@
 window.addEventListener('load', function() {
 
     let formulario = this.document.querySelector("form.register")
-    if (formulario == null) {}else {
+    
     formulario.addEventListener("submit", function(e){
         let errores = []
         let ulErrores = document.querySelector("div.errores ul") 
@@ -53,11 +53,11 @@ window.addEventListener('load', function() {
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
             }
         }
-    }) }
+    }) 
 
 
     let formularioLogin = this.document.querySelector("form.login")
-    if (formularioLogin == null) {}else {
+    
     formularioLogin.addEventListener("submit", function(e){
         let erroresLogin = []
         let ulErrores = document.querySelector("div.errores ul") 
@@ -100,5 +100,6 @@ window.addEventListener('load', function() {
 }
 
 
-}
+
 )
+

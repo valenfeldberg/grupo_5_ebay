@@ -157,7 +157,26 @@ const controller = {
 						req.session.userLogged = user[0]	
 						res.redirect("userDetail")
 							
-			  		}
+			  		} else 
+					   {
+						res.render("login", {
+							errors: {
+								email: {
+									msg: "La contraeña es incorrecta"
+								}
+							},
+							oldData: req.body
+							})
+					   }
+				} else {
+					res.render("login", {
+						errors: {
+							email: {
+								msg: "No se encuentra este email en nuestra bases de datos"
+							}
+						},
+						oldData: req.body
+						})
 				}
 			  })
 		/*const userInDb = (req.body.email);
