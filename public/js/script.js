@@ -1,5 +1,48 @@
 window.addEventListener('load', function() {
 
+    let formularioCrear = this.document.querySelector("form.crear")
+    if (formularioCrear == null) {}else {   
+        formularioCrear.addEventListener("submit", function(e){
+        let erroresCrear = []
+        let ulErrores = document.querySelector("div.errores ul") 
+        ulErrores.innerHTML = ""
+        let campoNombre = document.querySelector('input[name="nombre_producto"]')
+        let campoDescripcion = document.querySelector('input[name="descripcion"]')
+        let campoImagen = document.querySelector('input[name="imagen"]')
+    
+        if (campoNombre.value == "") {
+            erroresCrear.push("El campo de nombre de producto tiene que estar completo")
+        } else if (campoNombre.value.length < 5) {
+            erroresCrear.push("El campo de nombre de producto debe tener al menos 5 caracteres")
+        }
+
+       if (campoDescripcion.value.length < 20) {
+            erroresCrear.push("El campo descripcion debe tener al menos 20 caracteres")
+        }
+
+        if (campoImagen.value == "") {
+            erroresCrear.push("Se debe seleccionar una imagen")
+        } else if (!/(.jpg|.jpeg|.png|.gif)$/i.exec(campoImagen.value)) {
+            erroresCrear.push("La imagen debe ser JPG, JPEG, PNG, GIF")
+        }
+
+
+        if (erroresCrear.length > 0) {
+            e.preventDefault()
+
+            
+            for (let i = 0; i < erroresCrear.length; i++) {
+                ulErrores.innerHTML += "<li>" + erroresCrear[i] + "</li>"
+            }
+        }
+    }) }
+
+
+
+
+
+
+
     let formulario = this.document.querySelector("form.register")
     if (formulario == null) {}else {
     formulario.addEventListener("submit", function(e){

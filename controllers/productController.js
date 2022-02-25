@@ -30,7 +30,7 @@ const productController = {
 
    
 
-  getAllMisPublicaciones: (req, res) => {
+  getAllMisPublicaciones: (req, res) => { 
     const userLogged = req.session.userLogged.email;
     db.Usuario.findAll({
       where: {

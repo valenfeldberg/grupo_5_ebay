@@ -6,9 +6,12 @@
     <%- include ('./partials/header')%> 
     
      <h1>AGREGAR PRODUCTO</h1>
-       
-       <form class="formato-formulario" action="/productCreate" enctype="multipart/form-data" 
-       method="POST" class="create-form">
+     <div class ="errores"> 
+        <ul>
+            
+        </ul>
+            </div>
+       <form class="crear formato-formulario" action="/productCreate" enctype="multipart/form-data" method="POST" >
         <div class="control-formulario">
             <label>Nombre del Producto</label>
             <br>
