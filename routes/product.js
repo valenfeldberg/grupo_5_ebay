@@ -20,15 +20,17 @@ const upload = multer({ storage });
 
 const validations = [
 	body('nombre_producto').notEmpty().withMessage('Tienes que escribir un nombre'),
+	body('nombre_producto').isLength({ min: 5 }).withMessage('Tiene que tener minimo 5 caracteres'),
 	body('valor').notEmpty().withMessage('Tienes que escribir un valor'),
 //	body('email')
 //		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
 //		.isEmail().withMessage('Debes escribir un formato de correo válido'),
 	body('ubicacion').notEmpty().withMessage('Tienes que escribir una ubicacion'),
 	body('descripcion').notEmpty().withMessage('Tienes que elegir una descripcion'),
+	body('descripcion').isLength({ min: 20 }).withMessage('Tiene que tener minimo 20 caracteres'),
 	body('imagen').custom((value, { req }) => {
 		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif'];
+		let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 		
 		if (!file) {
 			throw new Error('Tienes que subir una imagen');
@@ -51,10 +53,10 @@ router.get("/product", productController.getAll);
 //router.get("/carrito", productController.carrito);
 
 router.get("/productCreate", authMiddleware,  productController.create);
-
+router.get("/misPublicaciones", authMiddleware,  productController.getAllMisPublicaciones);
 router.get("/product/:id", productController.getOne);
 router.post("/productCreate", upload.single("imagen"), validations, productController.save);
-router.get("/misPublicaciones", authMiddleware,  productController.getAllMisPublicaciones);
+
 router.delete("/product/:id", productController.delete);
 
 // Formulario de edición de productos (GET)

@@ -24,15 +24,18 @@ const uploadFile = multer({ storage });
 
 const validations = [
 	body('first_name').notEmpty().withMessage('Tienes que escribir un nombre'),
+	body('first_name').isLength({ min: 2 }).withMessage('Tiene que tener minimo 2 caracteres'),
 	body('last_name').notEmpty().withMessage('Tienes que escribir un nombre'),
+	body('last_name').isLength({ min: 2 }).withMessage('Tiene que tener minimo 2 caracteres'),
 	body('email')
 		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
 		.isEmail().withMessage('Debes escribir un formato de correo válido'),
 	body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+	body('password').isLength({ min: 8 }).withMessage('Tiene que tener minimo 8 caracteres'),
 	body('country').notEmpty().withMessage('Tienes que elegir un país'),
 	body('avatar').custom((value, { req }) => {
 		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif'];
+		let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 		
 		if (!file) {
 			throw new Error('Tienes que subir una imagen');
@@ -45,6 +48,14 @@ const validations = [
 
 		return true;
 	})
+]
+
+const validationslogin = [	
+	body('email')
+		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
+		.isEmail().withMessage('Debes escribir un formato de correo válido'),
+	body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+	body('password').isLength({ min: 8 }).withMessage('Tiene que tener minimo 8 caracteres'),	
 ]
 
 // Formulario de registro
@@ -61,7 +72,7 @@ router.post('/register', uploadFile.single('avatar'), validations, loginControll
 router.get('/login', guestMiddleware, loginController.login);
 
 // Procesar el login
-router.post('/login', validations, loginController.processLogin);
+router.post('/login', validationslogin, loginController.processLogin);
 
 // Perfil de Usuario
 router.get('/userDetail', authMiddleware, loginController.profile);

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('./partials/head')%> 
+<body>
+    <%- include ('./partials/header')%> 
+    
+    <img class = "banner" src = "/images/banner_3.png" alt = "Home Banner" width="340px">
+    
+    <!--<p class="frase"> "El lugar donde aquello que no usas se puede convertir en aquello que deseas" </p>-->
+
+    <main>
+
+        <div>
+            <p class = "tituloArticulo"><b><%- product.nombre_producto %></b></p>
+           
+            </ul>
+        </div>
+
+        <article>
+            
+            <div class="descripcionArticulo">
+                <a href="./productDetailbicicleta">Creá tu cuenta </a>
+                <img src= "<%- product.imagen %>" alt = "producto" width = "340px">
+                <P class="textoDescripcion"><%- product.descripcion %>.
+                </P>
+            </div>
+                
+            <section>
+                <img src= "<%- product.imagen1 %>" alt = "producto" width = "140px">
+                <img src= "<%- product.imagen2 %>" alt = "producto" width = "140px">
+                <img src= "<%- product.imagen3 %>" alt = "producto" width = "140px">
+                <img src= "<%- product.imagen4 %>" alt = "producto" width = "140px">
+            </section>
+
+        </article>
+
+       
+
+    </main>
+
+    <%- include ('./partials/footer')%> 
+
+</body>
+</html>

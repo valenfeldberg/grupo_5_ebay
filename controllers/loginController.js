@@ -145,7 +145,16 @@ const controller = {
 	},
 	
 	processLogin: (req, res) => {		
+		const resultValidation = validationResult(req);
 		
+		if (resultValidation.errors.length > 0) {
+			console.log("pase por validaciones error " + resultValidation.errors)
+			 res.render('login', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		} else {
+			console.log("pase por validaciones OKKKKKKK")
 		db.Usuario.findAll({
 			where: {
 					email: req.body.email
@@ -178,7 +187,7 @@ const controller = {
 						oldData: req.body
 						})
 				}
-			  })
+			  })}
 		/*const userInDb = (req.body.email);
 		const user = users.find(
 		  (userElement) => userElement.email === userInDb

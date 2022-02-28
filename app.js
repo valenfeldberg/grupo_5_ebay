@@ -60,7 +60,7 @@ const loginRouter = require("./routes/login")
 
 app.use('/', productRouter);
 app.use('/product', productRouter);
-app.use('/misPublicaciones', productRouter);
+//app.use('/misPublicaciones', productRouter);
 app.use('/', loginRouter);
 //app.use('/logged', loginRouter);
 app.use('/', loginRouter);

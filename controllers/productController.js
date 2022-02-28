@@ -67,7 +67,7 @@ const productController = {
     res.render("productCreate", {});
   },
 
-  getOne: (req, res) => {
+  getOne: (req, res) => { 
     const paramId = parseInt(req.params.id);
     db.Producto.findByPk(paramId)
     .then(function(product) {
@@ -75,18 +75,20 @@ const productController = {
     })
   },
 
-  save: (req, res) => {/*
+  save: (req, res) => {
     const resultValidation = validationResult(req);
 		console.log(resultValidation)
 		if (resultValidation.errors.length > 0) {
+      console.log("pase por el MAL VALIDACIONES")
 			return res.render('productCreate', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
-		}*/
-
+		} else {
+    console.log("pase por el OK")
     const userLogged = req.session.userLogged.email;
-      db.Usuario.findAll({
+    console.log(userLogged)
+    db.Usuario.findAll({
         where: {
                 email: userLogged
               }
@@ -101,7 +103,7 @@ const productController = {
             descripcion: req.body.descripcion,    
             user_id : usuarioActivo
         })                
-          })
+          })}
 
     res.redirect("/product")
     // const imagen = req.file.filename
