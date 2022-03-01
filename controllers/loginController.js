@@ -163,6 +163,11 @@ const controller = {
 				  
 				if (user.length != 0) {
 					if (bcryptjs.compareSync(req.body.password, user[0].password)) {
+						if(req.body.remember_user) {
+							console.log("Estoy guardando cookieeeeeeeeeeee")					
+							res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 60})							
+						}	
+						
 						req.session.userLogged = user[0]	
 						res.redirect("userDetail")
 							

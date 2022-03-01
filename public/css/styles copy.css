@@ -1,32 +1,6 @@
- 
-  @media screen and (max-width: 800px) {
- 
-    .flex-container {
-        display: block;
-    
-    }
-
-    main {
-        text-align: center;
-    }
-
-article {
-    padding-top: 0px;
-    text-align: center;
-    background-color: white;
-    margin: 10px;
-    border: solid 2px #8a8888;    
-    border-radius:5px;
-    width: 100%;
-}
-
-  }
-
 .flex-container {
     display: flex;
-    flex-wrap: wrap;    
-    justify-content: center;
-
+    flex-wrap: wrap;
 }
 
 .flex-container div {
@@ -137,19 +111,8 @@ text-align: center;
     color: rgb(255, 255, 255);
 }
 
-article {
-    padding-top: 0px;
-    text-align: center;
-    background-color: white;
-    margin: 10px;
-    border: solid 2px #8a8888;    
-    border-radius:5px;
-}
 
-article:hover {
-    box-shadow: 0px 0px 10px rgb(255, 255, 255);
-    transition: all 1s;
-}
+
 
 article:hover .articulo {
     opacity: 1;
@@ -196,7 +159,7 @@ footer {
 form {
     background-color: white;
     margin: 15px;
-    padding: 5px;
+    padding: 25px;
     border-radius: 7px;
 }
 

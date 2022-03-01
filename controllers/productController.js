@@ -100,6 +100,10 @@ const productController = {
             ubicacion: req.body.ubicacion,
             usado: req.body.usado,
             imagen : "/images/" + req.file.filename,
+            imagen1 : "/images/" + req.file.filename,
+            imagen2 : "/images/" + req.file.filename,
+            imagen3 : "/images/" + req.file.filename,
+            imagen4 : "/images/" + req.file.filename,
             descripcion: req.body.descripcion,    
             user_id : usuarioActivo
         })                
