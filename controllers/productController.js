@@ -8,7 +8,7 @@ const productsFilePath = path.join(__dirname, "./data/productos.json");
 
 const productController = {
 
-  getAll: (req, res) => {
+  getAll: (req, res) => { 
     db.Producto.findAll()
     .then(function(products) {
       return res.render("index", { product: products });
@@ -64,7 +64,10 @@ const productController = {
   },*/
 
   create: (req, res) => {
-    res.render("productCreate", {});
+    db.Categoria.findAll()
+    .then(function(categorias) {
+      return res.render("productCreate", { categorias: categorias });
+    })
   },
 
   getOne: (req, res) => { 
@@ -86,6 +89,7 @@ const productController = {
 			});
 		} else {
     console.log("pase por el OK")
+    console.log(req.body)
     const userLogged = req.session.userLogged.email;
     console.log(userLogged)
     db.Usuario.findAll({
@@ -94,9 +98,20 @@ const productController = {
               }
           }).then(function(user) {
           var usuarioActivo = user[0].id
+
+          db.Categoria.findAll({
+            where: {
+                    categoria: req.body.categoria
+                  }
+              }).then(function(categoria) {
+              var categoriaElegida = categoria[0].id
+              console.log(categoriaElegida)
+
+
+
           db.Producto.create({    
             nombre_producto: req.body.nombre_producto,
-            valor: req.body.valor,
+            valor: req.body.valor,           
             ubicacion: req.body.ubicacion,
             usado: req.body.usado,
             imagen : "/images/" + req.file.filename,
@@ -105,8 +120,10 @@ const productController = {
             imagen3 : "/images/" + req.file.filename,
             imagen4 : "/images/" + req.file.filename,
             descripcion: req.body.descripcion,    
-            user_id : usuarioActivo
-        })                
+            user_id : usuarioActivo,
+            categoria_id : categoriaElegida           
+        })   
+        })             
           })}
 
     res.redirect("/product")

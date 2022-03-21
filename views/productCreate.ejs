@@ -38,6 +38,22 @@
             <% } %>
        
         </div>
+       
+   
+       
+       
+        <div class="control-formulario">
+            <br>
+        <label for="cars">Seleccione una categoria:</label>
+     
+            <select name="categoria" >
+            <% for (let i = 0; i < categorias.length; i++) { %>
+              <option value="<%- categorias[i].categoria %>"><%- categorias[i].categoria %></option>          
+            <% } %>   
+            </select>
+           
+         </div>
+         <br>
         <div class="control-formulario">
             <label>Localidad</label>
             <br>
@@ -50,6 +66,7 @@
                 </div>
             <% } %>
         </div>
+        <br>
         <div class="control-formulario">
             <label for="">¿Es nuevo o usado?</label>
             <br>

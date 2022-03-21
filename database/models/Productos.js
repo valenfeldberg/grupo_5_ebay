@@ -37,6 +37,9 @@ module.exports = function(sequelize, dataTypes) {
         },
         user_id: {
             type: dataTypes.INTEGER,        
+        },
+        categoria_id: {
+            type: dataTypes.INTEGER,        
         }, 
     }
 
@@ -52,6 +55,13 @@ module.exports = function(sequelize, dataTypes) {
         Productos.belongsTo(models.Usuario, {
         as: "usuario",
         foreignKey: "user_id"
+        });
+        }
+
+        Productos.associate = function(models){
+        Productos.belongsTo(models.Categoria, {
+       as: "categoria",
+        foreignKey: "categoria_id"
         });
         }
 
