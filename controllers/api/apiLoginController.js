@@ -2,16 +2,33 @@ let db = require("../../database/models")
 
 const controller = {
 	users: (req, res) => {		
-		db.Usuario.findAll()
+		db.Usuario.findAll({
+            raw: true
+        })
         .then(users => {
+            const nuevoArreglo = []
+            for (const user of users) {
+                nuevoArreglo.push({
+                    id: user.id,
+                    first_name: user.first_name,
+                    last_name: user.last_name,
+                    email: user.email,
+                    gender: user.gender,
+                    ubicacion: user.ubicacion,                       
+                    imagen: user.imagen,
+                    detail: "http://localhost:4000/api/users/" + user.id
+                })
+            }
+
+
             let respuesta = {
                 meta: {
                     status : 200,
                     count: users.length,
                     url: 'api/users'
                 },
-                users: users,
-               // url: "/userDetail/" + users[i].id
+                users: nuevoArreglo,
+            
             }
                 res.json(respuesta);
             })
