@@ -41,6 +41,9 @@ module.exports = function(sequelize, dataTypes) {
         categoria_id: {
             type: dataTypes.INTEGER,        
         }, 
+        carro_user: {
+            type: dataTypes.INTEGER,        
+        }, 
     }
 
     let config = {

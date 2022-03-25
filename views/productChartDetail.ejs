@@ -4,12 +4,14 @@
 
     <body>
         <%- include ('./partials/header')%>
+
         <div class="carousel">     
             <div id="imagen"></div>    
         </div>
-           <!-- <img class="banner" src="/images/banner_3.png" alt="Home Banner" width="340px">
+    
+       <!-- <img class = "banner" src = "/images/banner_3.png" alt = "Home Banner" width="340px">
 
-            <p class="frase"> "El lugar donde aquello que no usas se puede convertir en aquello que deseas" </p>-->
+            <!--<p class="frase"> "El lugar donde aquello que no usas se puede convertir en aquello que deseas" </p>-->
 
             <main>
 
@@ -40,10 +42,10 @@
                     <br>
                     <br>
                     <form class="formato-formulario" action="<%- product.id %>/?_method=PUT" method="POST" class="create-form">   
-                        <label for="">¿Agregar al Carrito?</label>
+                        <label for="">¿Eliminar de Carrito?</label>
                         <br>
                         <br>
-                        <button type="submit" class="boton-formulario">Agregar</button>
+                        <button type="submit" class="boton-formulario">Eliminar</button>
 
                         <br>
                     </form>

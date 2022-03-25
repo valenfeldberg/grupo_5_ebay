@@ -1,0 +1,19 @@
+<div>
+    <a href="/product">  <p class = "publicaciones"><b>PRODUCTOS EN CARRITO</b></p></a>
+</div>
+<div class="flex-container">
+
+            <% for (let i = 0; i < product.length; i++) { %>
+                <article>
+
+                        <a href="./productChart/<%- product[i].id %>"> <img src= "<%- product[i].imagen %>" alt = "Parlante" width = "340px" ></a>
+
+                        <section>
+                            <p class="articulo"><%- product[i].nombre_producto %></p> 
+                            <p class="ubicacion"><i class="fas fa-map-marked-alt"></i><%- product[i].ubicacion %></i></p>
+                            <p class="valor"><%- product[i].valor %></i></p>
+                        </section>
+                
+                </article>
+            <% } %>
+</div>

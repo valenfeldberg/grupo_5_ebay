@@ -54,7 +54,8 @@ router.get("/product", productController.getAll);
 
 router.get("/productCreate", authMiddleware,  productController.create);
 router.get("/misPublicaciones", authMiddleware,  productController.getAllMisPublicaciones);
-router.get("/product/:id", productController.getOne);
+router.get("/product/:id",productController.getOne);
+router.get("/productChart/:id",productController.getOneChart);
 router.post("/productCreate", upload.single("imagen"), validations, productController.save);
 
 router.delete("/product/:id", productController.delete);
@@ -63,7 +64,11 @@ router.delete("/product/:id", productController.delete);
 router.get("/product/:id/productEdit", productController.edit);
 
 // Acción de edición (a donde se envía el formulario) (PUT)
+router.put("/product/:id", authMiddleware, productController.carro);
 router.put("/product/:id", productController.update);
+router.put("/productChart/:id", authMiddleware, productController.sacarDelCarro);
+router.get("/chart", productController.chart);
+
 
 
 
