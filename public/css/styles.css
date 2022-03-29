@@ -75,7 +75,7 @@ h1 {
 .titulo {
     color: white;
     text-align: center;
-    font-size: 65px;
+    font-size: 80px;
     margin: -0.1%;
     border-bottom: solid 2px rgb(255, 255, 255);
     /*font-family: 'Viga', sans-serif;*/
@@ -253,11 +253,20 @@ form {
 }
 
 .textoDescripcion {
-    margin-left: 60px; 
+    
    font-size: 20px;
-    text-align: left;
+    text-align: center;
     padding: 12px;
 }
+
+.eliminarRegistro {
+    width: auto;
+   align-content: center;
+     text-align: center;
+    
+ }
+ 
+
 .formato-formulario {
     background-color: black;
     color: white;
